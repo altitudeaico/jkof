@@ -1511,3 +1511,10 @@ h1, h2, h3, h4, h5, h6 {
         padding: 3rem 1.5rem 2rem;
     }
 }
+ 
+/* --- Biography Gallery (Masonry) --- */ 
+.bio-gallery { max-width: 900px; margin: 0 auto; columns: 3; column-gap: 1.2rem; } 
+.bio-gallery figure { margin: 0 0 1.2rem 0; break-inside: avoid; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.1); background: #fff; } 
+.bio-gallery figure:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); } 
+.bio-gallery figure img { display: block; width: 100%; height: auto; } 
+.bio-gallery figcaption { padding: 0.7rem 1rem; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-style: italic; color: #666; text-align: center; } 
