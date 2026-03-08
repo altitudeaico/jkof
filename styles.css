@@ -827,61 +827,43 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Biography Gallery --- */
+/* --- Biography Gallery (Masonry) --- */
 .bio-gallery {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto;
-}
-
-.bio-gallery-feature {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.bio-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    columns: 3;
+    column-gap: 1.2rem;
 }
 
 .bio-gallery figure {
-    margin: 0;
+    margin: 0 0 1.2rem 0;
+    break-inside: avoid;
+    border-radius: 10px;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    background: var(--navy);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bio-gallery figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .bio-gallery figure img {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 4;
+    height: auto;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bio-gallery-feature figure img {
-    aspect-ratio: 3 / 4;
-}
-
-.bio-gallery-grid figure img {
-    aspect-ratio: 4 / 3;
-}
-
-.bio-gallery figure:hover img {
-    transform: scale(1.05);
 }
 
 .bio-gallery figcaption {
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem;
     font-family: var(--serif);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-style: italic;
     color: var(--text-light);
     text-align: center;
-    background: var(--white);
 }
 
 .section-cream {
@@ -1564,16 +1546,8 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
-    .bio-gallery-feature {
-        grid-template-columns: 1fr;
-    }
-
-    .bio-gallery-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .bio-gallery-feature figure img {
-        aspect-ratio: 4 / 3;
+    .bio-gallery {
+        columns: 2;
     }
 
     .mobile-nav a {
