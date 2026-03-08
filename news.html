@@ -9,6 +9,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .news-card-image-bg {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .news-card-image-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .news-card:hover .news-card-image-bg img {
+            transform: scale(1.05);
+        }
+        .news-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.5rem 1.5rem;
+            background: linear-gradient(to bottom, rgba(0, 71, 171, 0) 0%, rgba(0, 71, 171, 0.7) 40%, rgba(0, 71, 171, 0.95) 100%);
+        }
+        .news-card-overlay .news-card-date {
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+        .news-card-overlay h3 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.3;
+        }
+    </style>
 </head>
 <body>
 
@@ -64,72 +100,84 @@
             <div class="news-grid">
 
                 <div class="news-card reveal">
-                    <div style="height: 220px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); display: flex; align-items: center; justify-content: center;">
-                        <span style="font-family: var(--serif); font-size: 2rem; color: var(--gold); font-weight: 300;">JKOF</span>
+                    <div class="news-card-image-bg">
+                        <img src="https://storage.googleapis.com/msgsndr/efbrHmHYWZ6RVRTnWxVu/media/69875c08d017c3e29511f111.jpg" alt="2026 Scholarship Applications">
+                        <div class="news-card-overlay">
+                            <p class="news-card-date">January 2026</p>
+                            <h3>2026 Scholarship Applications Now Open</h3>
+                        </div>
                     </div>
                     <div class="news-card-body">
-                        <p class="news-card-date">January 2026</p>
-                        <h3>2026 Scholarship Applications Now Open</h3>
                         <p>The Foundation is pleased to announce that applications for the 2026 scholarship cycle are now being accepted. Eligible students in the UK and Nigeria are encouraged to apply through their partner schools.</p>
                         <a href="#" class="news-read-more">Read More</a>
                     </div>
                 </div>
 
                 <div class="news-card reveal">
-                    <div style="height: 220px; background: linear-gradient(135deg, var(--green) 0%, #3da85e 100%); display: flex; align-items: center; justify-content: center;">
-                        <span style="font-family: var(--serif); font-size: 2rem; color: var(--white); font-weight: 300;">Impact</span>
+                    <div class="news-card-image-bg">
+                        <img src="bio/images/2.jpg" alt="20 Scholarships Awarded">
+                        <div class="news-card-overlay">
+                            <p class="news-card-date">November 2025</p>
+                            <h3>20 Scholarships Awarded to Date</h3>
+                        </div>
                     </div>
                     <div class="news-card-body">
-                        <p class="news-card-date">November 2025</p>
-                        <h3>20 Scholarships Awarded to Date</h3>
                         <p>The Foundation has reached a significant milestone, having awarded over 20 scholarships to academically gifted students across the United Kingdom and Nigeria since its establishment in 2023.</p>
                         <a href="#" class="news-read-more">Read More</a>
                     </div>
                 </div>
 
                 <div class="news-card reveal">
-                    <div style="height: 220px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); display: flex; align-items: center; justify-content: center;">
-                        <span style="font-family: var(--serif); font-size: 2rem; color: var(--navy); font-weight: 300;">Partners</span>
+                    <div class="news-card-image-bg">
+                        <img src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/699999103a2afd236f8aaabd.jpeg" alt="New Partner School">
+                        <div class="news-card-overlay">
+                            <p class="news-card-date">September 2025</p>
+                            <h3>New Partner School Announced</h3>
+                        </div>
                     </div>
                     <div class="news-card-body">
-                        <p class="news-card-date">September 2025</p>
-                        <h3>New Partner School Announced</h3>
                         <p>The Foundation is delighted to welcome a new partner school to our growing network, expanding our reach and enabling us to identify and support more exceptional students.</p>
                         <a href="#" class="news-read-more">Read More</a>
                     </div>
                 </div>
 
                 <div class="news-card reveal">
-                    <div style="height: 220px; background: linear-gradient(135deg, var(--navy) 0%, #1a5cc8 100%); display: flex; align-items: center; justify-content: center;">
-                        <span style="font-family: var(--serif); font-size: 2rem; color: var(--gold); font-weight: 300;">Legacy</span>
+                    <div class="news-card-image-bg">
+                        <img src="bio/images/1.1.jpg" alt="Second Anniversary of the Foundation">
+                        <div class="news-card-overlay">
+                            <p class="news-card-date">July 2025</p>
+                            <h3>Second Anniversary of the Foundation</h3>
+                        </div>
                     </div>
                     <div class="news-card-body">
-                        <p class="news-card-date">July 2025</p>
-                        <h3>Second Anniversary of the Foundation</h3>
-                        <p>The Foundation marks two years since its establishment in July 2023, celebrating the progress made and reaffirming its commitment to Dr. JK's vision of educational empowerment for all.</p>
+                        <p>The Foundation marks two years since its establishment in July 2023, celebrating the progress made and reaffirming its commitment to Dr. JK&rsquo;s vision of educational empowerment for all.</p>
                         <a href="#" class="news-read-more">Read More</a>
                     </div>
                 </div>
 
                 <div class="news-card reveal">
-                    <div style="height: 220px; background: linear-gradient(135deg, var(--cream) 0%, #e8d4be 100%); display: flex; align-items: center; justify-content: center;">
-                        <span style="font-family: var(--serif); font-size: 2rem; color: var(--navy); font-weight: 300;">Stories</span>
+                    <div class="news-card-image-bg">
+                        <img src="bio/images/3.jpg" alt="Scholar Spotlight">
+                        <div class="news-card-overlay">
+                            <p class="news-card-date">March 2025</p>
+                            <h3>Scholar Spotlight: Pursuing Excellence</h3>
+                        </div>
                     </div>
                     <div class="news-card-body">
-                        <p class="news-card-date">March 2025</p>
-                        <h3>Scholar Spotlight: Pursuing Excellence</h3>
                         <p>Meet one of our scholarship recipients who is excelling in their studies and embodying the values of hard work, dedication, and service that Dr. JK championed throughout his life.</p>
                         <a href="#" class="news-read-more">Read More</a>
                     </div>
                 </div>
 
                 <div class="news-card reveal">
-                    <div style="height: 220px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); display: flex; align-items: center; justify-content: center;">
-                        <span style="font-family: var(--serif); font-size: 2rem; color: var(--white); font-weight: 300;">Founded</span>
+                    <div class="news-card-image-bg">
+                        <img src="https://storage.googleapis.com/msgsndr/efbrHmHYWZ6RVRTnWxVu/media/69875c085f93994486ba4c01.jpg" alt="Foundation Established">
+                        <div class="news-card-overlay">
+                            <p class="news-card-date">July 2023</p>
+                            <h3>Foundation Established</h3>
+                        </div>
                     </div>
                     <div class="news-card-body">
-                        <p class="news-card-date">July 2023</p>
-                        <h3>Foundation Established</h3>
                         <p>The James Kenechukwu Onwubalili Foundation is formally established to honour the legacy of Dr. JK and provide educational scholarships to gifted students in the UK and Nigeria.</p>
                         <a href="#" class="news-read-more">Read More</a>
                     </div>
@@ -145,7 +193,7 @@
             <span class="section-label">Stay Connected</span>
             <h2>Follow Our Journey</h2>
             <div class="gold-line-centre"></div>
-            <p>Keep up to date with the Foundation's work and the impact your support makes in the lives of students across the United Kingdom and Nigeria.</p>
+            <p>Keep up to date with the Foundation&rsquo;s work and the impact your support makes in the lives of students across the United Kingdom and Nigeria.</p>
             <a href="contact.html" class="btn btn-navy">Get in Touch</a>
         </div>
     </section>
