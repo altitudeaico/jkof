@@ -856,13 +856,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .bio-gallery figure img {
     width: 100%;
-    height: 280px;
+    height: 280px !important;
+    max-height: 280px;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bio-gallery-feature figure img {
-    height: 360px;
+    height: 360px !important;
+    max-height: 360px;
 }
 
 .bio-gallery figure:hover img {
