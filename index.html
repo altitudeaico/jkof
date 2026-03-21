@@ -14,6 +14,93 @@
 
     <style>
 
+        /* ===== PREMIUM BUTTON SYSTEM ===== */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50px !important;
+            padding: 1.1rem 3rem !important;
+            font-size: 0.75rem !important;
+            letter-spacing: 2.5px !important;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+            z-index: 1;
+        }
+
+        /* Shimmer sweep on hover */
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+            z-index: -1;
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Gold button — warm glow */
+        .btn-gold {
+            background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important;
+            color: var(--navy) !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+        }
+        .btn-gold:active {
+            transform: translateY(-1px) !important;
+            box-shadow: 0 2px 10px rgba(255, 191, 0, 0.3) !important;
+        }
+
+        /* Navy button — deep authority */
+        .btn-navy {
+            background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--navy) 100%) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+        }
+        .btn-navy:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 30px rgba(0, 71, 171, 0.45), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+        }
+        .btn-navy:active {
+            transform: translateY(-1px) !important;
+            box-shadow: 0 2px 10px rgba(0, 71, 171, 0.3) !important;
+        }
+
+        /* Outline button — elegant ghost */
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.4) !important;
+            border-radius: 50px !important;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.15) !important;
+            border-color: #fff !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 30px rgba(255,255,255,0.1) !important;
+        }
+        .btn-outline:active {
+            transform: translateY(-1px) !important;
+        }
+
+        /* Nav donate button */
+        .nav-cta {
+            border-radius: 50px !important;
+            background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 100%) !important;
+            box-shadow: 0 2px 10px rgba(255, 191, 0, 0.25) !important;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 20px rgba(255, 191, 0, 0.4) !important;
+        }
+
         /* Homepage nav: navy gradient to match hero */
         .nav-hero {
             background: linear-gradient(180deg, rgba(0, 51, 140, 0.85) 0%, rgba(0, 51, 140, 0.4) 60%, transparent 100%);
