@@ -12,8 +12,77 @@
 </head>
 <body>
 
+    <style>
+        /* Homepage nav: navy gradient to match hero */
+        .nav-hero {
+            background: linear-gradient(180deg, rgba(0, 51, 140, 0.85) 0%, rgba(0, 51, 140, 0.4) 60%, transparent 100%);
+        }
+        .nav-hero .nav-links a { color: #fff; }
+        .nav-hero .nav-links a:hover { color: var(--gold); }
+        .nav-hero .hamburger span { background: #fff; }
+        .nav-hero.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .nav-hero.scrolled .nav-links a { color: var(--text); }
+        .nav-hero.scrolled .nav-links a:hover { color: var(--navy); }
+        .nav-hero.scrolled .hamburger span { background: var(--text); }
+
+        /* Hero: foundation name as the big H1 */
+        .hero-established {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+        }
+        .hero-foundation-name {
+            font-family: var(--serif);
+            font-size: 3.8rem;
+            font-weight: 300;
+            line-height: 1.12;
+            margin-bottom: 1.2rem;
+            color: #fff;
+        }
+        .hero-strapline {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+        .hero-description {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            line-height: 1.85;
+            margin-bottom: 2.5rem;
+            max-width: 520px;
+        }
+        .hero-photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.5rem 1.2rem;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);
+            text-align: center;
+            font-family: var(--serif);
+            font-size: 1rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+        }
+        @media (max-width: 999px) {
+            .hero-foundation-name { font-size: 2.6rem; }
+            .hero-strapline { font-size: 1.3rem; }
+        }
+    </style>
+
     <!-- Navigation -->
-    <nav class="nav" id="nav">
+    <nav class="nav nav-hero" id="nav">
         <div class="nav-inner">
             <a href="index.html">
                 <img src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/69788457ec6e2b53877c570a.png" alt="JKOF Logo" class="logo">
@@ -54,18 +123,18 @@
     <!-- Hero — Split Screen -->
     <section class="hero hero-split">
         <div class="hero-content hero-navy">
-            <span class="section-label">Empowerment for Change</span>
-            <h1 style="font-family: var(--serif); font-size: 3.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem;">Honouring a Legacy of Excellence Through Education</h1>
-            <div class="gold-line"></div>
-            <p style="font-size: 1.15rem; opacity: 0.85; line-height: 1.8; margin-bottom: 2.5rem;">The James Kenechukwu Onwubalili Foundation provides scholarships to academically gifted but financially disadvantaged students in the United Kingdom and Nigeria.</p>
+            <p class="hero-established">Established July 2023</p>
+            <h1 class="hero-foundation-name">James Kenechukwu Onwubalili Foundation</h1>
+            <p class="hero-strapline">Empowerment for Change</p>
+            <p class="hero-description">Honouring a legacy of academic excellence by eliminating financial barriers to education for brilliant young minds in the UK and Nigeria.</p>
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="donate.html" class="btn btn-gold">Support Our Mission</a>
+                <a href="donate.html" class="btn btn-gold">Support a Student</a>
                 <a href="about.html" class="btn btn-outline">Learn More</a>
             </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" style="position: relative;">
             <img src="https://storage.googleapis.com/msgsndr/efbrHmHYWZ6RVRTnWxVu/media/69875c08d017c3e29511f111.jpg" alt="Dr. James Kenechukwu Onwubalili">
-            <p style="text-align: center; font-family: var(--serif); font-size: 1.1rem; color: var(--text-light); padding: 1rem 1rem 0; font-style: italic;">Dr. J.K. Onwubalili MD FRCP</p>
+            <div class="hero-photo-caption">Dr. J.K. Onwubalili MD FRCP</div>
         </div>
     </section>
 
