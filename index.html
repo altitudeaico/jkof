@@ -187,15 +187,65 @@
             <img src="https://storage.googleapis.com/msgsndr/efbrHmHYWZ6RVRTnWxVu/media/69875c085f93994486ba4c01.jpg" alt="Dr. James Kenechukwu Onwubalili">
         </div>
         <div class="story-text">
-            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">His Story</h2>
-            <p style="font-family: var(--serif); font-size: 3.4rem; font-weight: 200; line-height: 1.15; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 1.5rem;">From the Village School at Ogidi<br><span style="color: var(--gold);">to the Royal College</span></p>
-            <div class="gold-line"></div>
+            <h2 class="story-label" style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">His Story</h2>
+            <p style="font-family: var(--serif); font-size: 3.4rem; font-weight: 200; line-height: 1.15; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 1.5rem; overflow: hidden;"><span class="story-line1" style="display: inline-block;">From the Village School at Ogidi</span><br><span class="story-line2" style="display: inline-block; color: var(--gold);">to the Royal College</span></p>
+            <div class="story-goldline gold-line"></div>
+            <div class="story-body">
             <p>Dr. James Kenechukwu Onwubalili was a distinguished medical professional whose life embodied the transformative power of education. Born in Nigeria, he rose through academic excellence to become a Fellow of the Royal College of Physicians and a respected consultant in the United Kingdom.</p>
             <p>Throughout his career, Dr. JK demonstrated an unwavering commitment to the highest standards of medical practice, earning numerous accolades including the Gold Medal from the Royal College of Physicians of Ireland.</p>
             <p>His belief that every gifted student deserves the opportunity to fulfil their potential — regardless of financial circumstance — became the founding principle of the JKOF.</p>
             <a href="biography.html" class="btn btn-navy" style="margin-top: 1rem;">Read Full Biography</a>
+            </div>
         </div>
     </section>
+
+    <style>
+        /* Story heading cinematic animations */
+        @keyframes slideFromLeft {
+            from { opacity: 0; transform: translateX(-60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes sweepReveal {
+            from { opacity: 0; transform: translateY(40px) skewY(2deg); }
+            to { opacity: 1; transform: translateY(0) skewY(0deg); }
+        }
+        @keyframes goldUnveil {
+            from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-20px); }
+            to { opacity: 1; clip-path: inset(0 0% 0 0); transform: translateX(0); }
+        }
+        @keyframes lineGrow {
+            from { width: 0; opacity: 0; }
+            to { width: 60px; opacity: 1; }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .story-label,
+        .story-line1,
+        .story-line2,
+        .story-goldline,
+        .story-body {
+            opacity: 0;
+        }
+
+        .story-label.animate {
+            animation: slideFromLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .story-line1.animate {
+            animation: sweepReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+        }
+        .story-line2.animate {
+            animation: goldUnveil 1s cubic-bezier(0.22, 1, 0.36, 1) 0.7s forwards;
+        }
+        .story-goldline.animate {
+            animation: lineGrow 0.6s ease-out 1.1s forwards;
+        }
+        .story-body.animate {
+            animation: fadeUp 0.8s ease-out 1.3s forwards;
+        }
+    </style>
 
     <!-- Achievements -->
     <section class="section">
@@ -331,4 +381,29 @@
                     <p><strong>Web:</strong> www.jameskofoundation.org</p>
                     <p><strong>Registration:</strong> 7061941</p>
                 </div>
-         
+                     </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 James Kenechukwu Onwubalili Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Story section cinematic scroll animation
+        var storyObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.story-label, .story-line1, .story-line2, .story-goldline, .story-body').forEach(function(el) {
+                        el.classList.add('animate');
+                    });
+                    storyObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        var storySection = document.querySelector('.story-section');
+        if (storySection) storyObserver.observe(storySection);
+    </script>
+</body>
+</html>
