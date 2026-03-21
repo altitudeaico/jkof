@@ -13,17 +13,6 @@
 <body>
 
     <style>
-        /* Noise texture overlay — pure CSS gradient noise */
-        .textured::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                repeating-conic-gradient(rgba(255,255,255,0.03) 0% 25%, transparent 0% 50%) 0 0 / 3px 3px,
-                repeating-conic-gradient(rgba(0,0,0,0.03) 0% 25%, transparent 0% 50%) 1px 1px / 3px 3px;
-            pointer-events: none;
-            z-index: 0;
-        }
 
         /* Homepage nav: navy gradient to match hero */
         .nav-hero {
@@ -168,10 +157,12 @@
 
     <!-- Hero — Split Screen -->
     <section class="hero hero-split">
-        <div class="hero-content hero-navy textured" style="position: relative; overflow: hidden;">
+        <div class="hero-content hero-navy" style="position: relative; overflow: hidden;">
             <!-- Subtle gold glow -->
             <div style="position: absolute; bottom: -20%; left: -10%; width: 60%; height: 80%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
             <div style="position: absolute; top: -30%; right: -20%; width: 50%; height: 100%; background: radial-gradient(ellipse, rgba(255,255,255,0.03) 0%, transparent 55%); pointer-events: none;"></div>
+            <!-- Linen texture -->
+            <div style="position: absolute; inset: 0; opacity: 0.4; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px);"></div>
             <p class="hero-established" style="position: relative; z-index: 1;">Established July 2023</p>
             <h1 class="hero-foundation-name" style="position: relative; z-index: 1;">James Kenechukwu Onwubalili Foundation <span style="font-size: 0.6em; opacity: 0.7;">(UK)</span></h1>
             <p class="hero-strapline" style="position: relative; z-index: 1;">Empowerment for Change</p>
@@ -188,12 +179,12 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="textured" style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 6rem 4rem; text-align: center; position: relative; overflow: hidden;">
+    <section style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 6rem 4rem; text-align: center; position: relative; overflow: hidden;">
         <!-- Subtle radial glow -->
         <div style="position: absolute; top: -50%; left: -20%; width: 70%; height: 200%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 70%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: -30%; right: -10%; width: 50%; height: 150%; background: radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, transparent 60%); pointer-events: none;"></div>
-        <!-- Diagonal grain texture -->
-        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px); pointer-events: none;"></div>
+        <!-- Visible grain texture -->
+        <div style="position: absolute; inset: 0; opacity: 0.4; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px);"></div>
         <div style="position: relative; z-index: 1;">
             <h2 style="font-family: var(--serif); font-size: 2.4rem; font-weight: 700; color: var(--gold); margin-bottom: 1.5rem;">Our Mission</h2>
             <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
@@ -295,12 +286,12 @@
     </section>
 
     <!-- Active Partnerships -->
-    <section class="textured" style="background: linear-gradient(160deg, #00336e 0%, var(--navy) 40%, #003580 100%); padding: 5rem 4rem; position: relative; overflow: hidden;">
+    <section style="background: linear-gradient(160deg, #00336e 0%, var(--navy) 40%, #003580 100%); padding: 5rem 4rem; position: relative; overflow: hidden;">
         <!-- Mesh gradient orbs -->
         <div style="position: absolute; top: -20%; right: -10%; width: 50%; height: 140%; background: radial-gradient(ellipse, rgba(80,200,120,0.07) 0%, transparent 65%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: -30%; left: -15%; width: 60%; height: 150%; background: radial-gradient(ellipse, rgba(255,191,0,0.04) 0%, transparent 60%); pointer-events: none;"></div>
-        <!-- Subtle noise grain -->
-        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(255,255,255,0.01) 1px, rgba(255,255,255,0.01) 2px); pointer-events: none;"></div>
+        <!-- Linen texture -->
+        <div style="position: absolute; inset: 0; opacity: 0.4; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px);"></div>
         <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
             <div style="margin-bottom: 3rem;">
                 <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Active Partnerships</h2>
@@ -370,13 +361,13 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="textured" style="background: linear-gradient(135deg, #1a4f38 0%, #2a6e4e 40%, #1d5c40 100%); padding: 8rem 4rem; text-align: center; position: relative; overflow: hidden;">
+    <section style="background: linear-gradient(135deg, #1a4f38 0%, #2a6e4e 40%, #1d5c40 100%); padding: 8rem 4rem; text-align: center; position: relative; overflow: hidden;">
         <!-- Radial glow from centre -->
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.08) 0%, transparent 60%); pointer-events: none;"></div>
         <!-- Light orb top-right -->
         <div style="position: absolute; top: -20%; right: -10%; width: 40%; height: 120%; background: radial-gradient(ellipse, rgba(255,255,255,0.05) 0%, transparent 55%); pointer-events: none;"></div>
-        <!-- Grain -->
-        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.012) 2px, rgba(255,255,255,0.012) 4px); pointer-events: none;"></div>
+        <!-- Linen texture -->
+        <div style="position: absolute; inset: 0; opacity: 0.4; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 3px);"></div>
         <div class="reveal" style="position: relative; z-index: 1;">
             <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Get Involved</h2>
             <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">Support the Next Generation</p>
