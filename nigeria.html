@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKOF Nigeria — James Kenechukwu Onwubalili Foundation (NIG)</title>
+    <meta name="description" content="The James Kenechukwu Onwubalili Foundation Nigeria — an affiliate of the UK parent foundation, supporting educational scholarships across Southern Nigeria.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --nig-green: #1d5c40;
+            --nig-green-light: #2a6e4e;
+            --nig-green-dark: #1a4f38;
+        }
+
+        /* Green nav for Nigeria page */
+        .nav-nig {
+            background: linear-gradient(180deg, rgba(29, 92, 64, 0.9) 0%, rgba(29, 92, 64, 0.4) 60%, transparent 100%);
+        }
+        .nav-nig .nav-links a { color: #fff; }
+        .nav-nig .nav-links a:hover { color: var(--gold); }
+        .nav-nig .hamburger span { background: #fff; }
+        .nav-nig.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .nav-nig.scrolled .nav-links a { color: var(--text); }
+        .nav-nig.scrolled .nav-links a:hover { color: var(--nig-green); }
+        .nav-nig.scrolled .hamburger span { background: var(--text); }
+
+        /* Hero */
+        .nig-hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--nig-green-dark) 0%, var(--nig-green) 40%, var(--nig-green-light) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 4rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .nig-hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Linen texture */
+        .nig-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);
+        }
+
+        .nig-hero > * { position: relative; z-index: 1; }
+
+        /* Entrance animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nig-anim { opacity: 0; animation: fadeUp 0.8s ease-out forwards; }
+        .nig-anim-1 { animation-delay: 0.2s; }
+        .nig-anim-2 { animation-delay: 0.5s; }
+        .nig-anim-3 { animation-delay: 0.8s; }
+        .nig-anim-4 { animation-delay: 1.1s; }
+        .nig-anim-5 { animation-delay: 1.4s; }
+        .nig-anim-6 { animation-delay: 1.7s; }
+
+        /* Section green variants */
+        .section-nig-green {
+            background: linear-gradient(135deg, var(--nig-green-dark) 0%, var(--nig-green) 50%, var(--nig-green-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .section-nig-green::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);
+        }
+
+        /* Premium buttons */
+        .btn { border-radius: 50px !important; padding: 1.1rem 3rem !important; position: relative; overflow: hidden; }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+        .btn:hover::before { left: 100%; }
+        .btn-gold {
+            background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important;
+            color: var(--navy) !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45) !important;
+        }
+        .btn-green {
+            background: linear-gradient(135deg, var(--nig-green) 0%, var(--nig-green-light) 100%) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 15px rgba(29, 92, 64, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+        }
+        .btn-green:hover {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 8px 30px rgba(29, 92, 64, 0.45) !important;
+        }
+        .btn-outline-white {
+            background: transparent !important;
+            color: #fff !important;
+            border: 2px solid rgba(255,255,255,0.4) !important;
+            border-radius: 50px !important;
+        }
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,0.15) !important;
+            border-color: #fff !important;
+            transform: translateY(-3px) !important;
+        }
+
+        @media (max-width: 767px) {
+            .nig-hero { padding: 7rem 1.5rem 4rem; }
+            .nig-hero h1 { font-size: 2.6rem; }
+            .nig-partners-grid { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav nav-nig" id="nav">
+        <div class="nav-inner">
+            <a href="index.html">
+                <img src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/69788457ec6e2b53877c570a.png" alt="JKOF Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="about.html">About &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="biography.html">Biography</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="nav-cta">Donate</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="biography.html">Biography</a>
+        <a href="history.html">History</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="mobile-cta">Donate</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="nig-hero">
+        <img class="nig-anim nig-anim-1" src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/69788457ec6e2b53877c570a.png" alt="JKOF Logo" style="width: 200px; height: auto; border-radius: 16px; margin-bottom: 2rem;">
+        <p class="nig-anim nig-anim-2" style="font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1rem;">Affiliate Foundation &mdash; Registered 2023</p>
+        <h1 class="nig-anim nig-anim-3" style="font-family: var(--serif); font-size: 3.4rem; font-weight: 300; line-height: 1.12; color: #fff; margin-bottom: 1rem;">James Kenechukwu Onwubalili<br>Foundation <span style="color: var(--gold);">(Nigeria)</span></h1>
+        <p class="nig-anim nig-anim-4" style="font-family: var(--serif); font-size: 1.6rem; font-weight: 300; font-style: italic; color: var(--gold); margin-bottom: 1.5rem;">Empowerment for Change</p>
+        <p class="nig-anim nig-anim-5" style="font-size: 1.05rem; color: rgba(255,255,255,0.8); line-height: 1.85; max-width: 600px; margin-bottom: 2rem;">An affiliate of the parent foundation in the United Kingdom, supporting academically gifted but financially disadvantaged students across Southern Nigeria.</p>
+        <div class="nig-anim nig-anim-6" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+            <a href="donate.html" class="btn btn-gold">Support a Student</a>
+            <a href="index.html" class="btn btn-outline-white">UK Foundation</a>
+        </div>
+    </section>
+
+    <!-- About the Nigeria Foundation -->
+    <section class="section">
+        <div class="section-inner" style="max-width: 800px;">
+            <div class="reveal" style="text-align: center;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">About</h2>
+                <p style="font-family: var(--serif); font-size: 2.8rem; font-weight: 200; line-height: 1.15; color: var(--navy); margin-bottom: 2rem;">The Nigeria Foundation</p>
+                <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 2rem;"></div>
+            </div>
+            <div class="reveal">
+                <p style="font-size: 1.05rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1.5rem;">James Kenechukwu Onwubalili Foundation (NIG) was registered with the Corporate Affairs Commission Nigeria in 2023. It is an affiliate of the parent foundation, James Kenechukwu Onwubalili Foundation (UK), which is registered as a Charitable Incorporated Organisation of England and Wales (2026).</p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1.5rem;">The Foundation operates across Southern Nigeria, working with partner schools to identify and support academically gifted students who require financial assistance to continue their education and achieve their potential.</p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1.5rem;">The Trustees for the parent and affiliate foundations come from diverse professional backgrounds. They include medical doctors from different specialties (Surgery, Nephrology, Public Health, Haematology, Accident &amp; Emergency, General Practice), a Certified Independent/Non-Executive Director (Financial Sector), University Lecturers, a Headteacher, a Real Estate Consultant, Deputy Managing Director at Society for Family Health and a Lawyer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Schools in Nigeria -->
+    <section class="section-nig-green" style="padding: 5rem 4rem;">
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <div style="margin-bottom: 3rem;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Partner Schools</h2>
+                <p style="font-family: var(--serif); font-size: 3rem; font-weight: 200; line-height: 1.12; color: #fff; letter-spacing: -0.5px;">Working Across Southern Nigeria</p>
+            </div>
+            <div class="nig-partners-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+                <div style="padding: 2rem 2rem 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">Government College Umuahia</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Abia State</p>
+                </div>
+                <div style="padding: 2rem 0 2rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">College of Medicine, University of Nigeria</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Enugu State</p>
+                </div>
+                <div style="padding: 2rem 2rem 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">University College Hospital Ibadan</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Oyo State</p>
+                </div>
+                <div style="padding: 2rem 0 2rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">Ebenezer Secondary School</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Ogidi, Anambra State</p>
+                </div>
+                <div style="padding: 2rem 2rem 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">Ide Secondary School</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Enugwu-Ukwu, Anambra State</p>
+                </div>
+                <div style="padding: 2rem 0 2rem 2rem; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">Okutalukwe Community School</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Enugwu-Ukwu, Anambra State</p>
+                </div>
+                <div style="padding: 2rem 2rem 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.15);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; margin-bottom: 0.4rem;">Trinity Secondary School</h3>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px;">Nnobi, Anambra State</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate CTA -->
+    <section style="background: var(--cream); padding: 6rem 4rem; text-align: center;">
+        <div class="reveal">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Support Our Students</h2>
+            <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; color: var(--navy); margin-bottom: 1.5rem;">Make a Difference in Nigeria</p>
+            <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Your contribution directly supports scholarships for gifted students across Southern Nigeria who face financial barriers to education.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+                <a href="donate.html" class="btn btn-green">Donate to Nigeria</a>
+                <a href="index.html" class="btn btn-gold">Visit UK Foundation</a>
+            </div>
+
+            <div style="max-width: 500px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 1.5rem;">Nigeria Bank Transfer</h3>
+                <div style="text-align: left;">
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.5rem;"><strong style="color: var(--navy);">Account Name:</strong> James Kenechukwu Onwubalili Foundation</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.5rem;"><strong style="color: var(--navy);">Bank:</strong> Zenith Bank</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 1rem;"><strong style="color: var(--navy);">Account Number:</strong> 1313476410</p>
+                    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic;">Registered with the Corporate Affairs Commission in Nigeria (Registration Number: 7061941)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section style="background: #fff; padding: 4rem; text-align: center;">
+        <div>
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Contact</h2>
+            <p style="font-family: var(--serif); font-size: 2rem; font-weight: 200; color: var(--navy); margin-bottom: 2rem;">Nigeria Office</p>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;"><strong>James Kenechukwu Onwubalili Foundation (NIG)</strong></p>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;">Peniel Building, No. 3, Ashabi Cole Street<br>Central Business District, Alausa, Ikeja<br>Nigeria</p>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8; margin-top: 1rem;"><strong>Phone:</strong> +44 750 636 3431</p>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;"><strong>Email:</strong> info&#64;jkofoundation.org</p>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;"><strong>Registration:</strong> 7061941</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--nig-green-dark); padding: 3rem 4rem; text-align: center;">
+        <img src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/69788457ec6e2b53877c570a.png" alt="JKOF" style="height: 50px; border-radius: 8px; margin-bottom: 1.5rem;">
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">&copy; 2026 James Kenechukwu Onwubalili Foundation. All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: rgba(255,255,255,0.35); margin-top: 0.5rem;">An affiliate of the James Kenechukwu Onwubalili Foundation (UK)</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
