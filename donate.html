@@ -9,6 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Premium buttons */
+        .btn { position: relative; overflow: hidden; border-radius: 50px !important; padding: 1.1rem 3rem !important; font-size: 0.75rem !important; letter-spacing: 2.5px !important; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; z-index: 1; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; z-index: -1; }
+        .btn:hover::before { left: 100%; }
+        .btn-gold { background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important; color: var(--navy) !important; font-weight: 700 !important; box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-gold:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45) !important; }
+        .btn-navy { background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--navy) 100%) !important; color: #fff !important; box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .btn-navy:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(0, 71, 171, 0.45) !important; }
+        .btn-outline-navy { background: transparent !important; color: var(--navy) !important; border: 2px solid var(--navy) !important; border-radius: 50px !important; }
+        .btn-outline-navy:hover { background: var(--navy) !important; color: #fff !important; transform: translateY(-3px) !important; }
+        .nav-cta { border-radius: 50px !important; background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 100%) !important; box-shadow: 0 2px 10px rgba(255, 191, 0, 0.25) !important; }
+        .nav-cta:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 20px rgba(255, 191, 0, 0.4) !important; }
+
+        /* Tier cards */
+        .tier { text-align: center; padding: 3rem 2.5rem; border-radius: 16px; background: #fff; border: 2px solid rgba(0,0,0,0.06); transition: all 0.4s ease; }
+        .tier:hover { transform: translateY(-4px); box-shadow: 0 16px 50px rgba(0,0,0,0.08); }
+        .tier-featured { border-color: var(--gold); position: relative; }
+        .tier-featured::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; color: #fff; background: linear-gradient(135deg, #FFBF00, #e6ac00); padding: 0.4rem 1.2rem; border-radius: 50px; }
+
+        /* Custom amount input */
+        .custom-amount-input {
+            width: 200px;
+            padding: 1rem 1.2rem;
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--navy);
+            text-align: center;
+            background: #fff;
+            border: 2px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .custom-amount-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(255, 191, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -54,139 +94,145 @@
     </div>
 
     <!-- Page Hero -->
-    <section class="page-hero">
-        <h1>Support Our Mission</h1>
-        <div class="gold-line-centre"></div>
-        <p>Your generosity empowers academically gifted students to overcome financial barriers and achieve their full potential.</p>
+    <section class="page-hero" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 60%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1;">
+            <h1 style="font-family: var(--serif); font-size: 3.8rem; font-weight: 200; letter-spacing: -0.5px;">Support Our Mission</h1>
+            <div class="gold-line-centre"></div>
+            <p style="font-family: var(--serif); font-size: 1.3rem; font-weight: 300; opacity: 0.85;">Your generosity eliminates financial barriers and empowers<br>the next generation of scholars.</p>
+        </div>
     </section>
 
     <!-- Why Donate -->
-    <section class="section">
-        <div class="section-inner">
-            <div class="section-header reveal">
-                <span class="section-label">Why Give</span>
-                <h2 class="section-title">Your Donation Changes Lives</h2>
-                <div class="gold-line-centre"></div>
+    <section style="background: #fff; padding: 6rem 4rem;">
+        <div style="max-width: 780px; margin: 0 auto; text-align: center;">
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Why Give</h2>
+                <p style="font-family: var(--serif); font-size: 3.2rem; font-weight: 200; line-height: 1.12; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 2rem;">Your Donation Changes Lives</p>
             </div>
-            <div class="donate-why reveal">
-                <p>Dr. James Kenechukwu Onwubalili dedicated his life to the pursuit of excellence and the belief that education is the most powerful instrument for change. The Foundation continues his legacy by providing scholarships, bursaries, and grants to academically gifted but financially disadvantaged students in the United Kingdom and Nigeria.</p>
-                <p style="margin-top: 1.5rem;">Every donation, no matter the size, directly supports a student's educational journey. Your contribution helps cover tuition fees, educational resources, and living costs — eliminating the financial barriers that stand between talented students and their potential.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact of Giving -->
-    <section class="section section-navy">
-        <div class="section-inner">
-            <div class="section-header">
-                <span class="section-label" style="color: var(--gold);">Your Impact</span>
-                <h2 class="section-title" style="color: var(--white);">What Your Donation Achieves</h2>
-                <div class="gold-line-centre"></div>
-            </div>
-            <div class="impact-grid">
-                <div class="impact-stat">
-                    <div class="impact-number">20+</div>
-                    <div class="impact-label">Scholarships Awarded</div>
-                </div>
-                <div class="impact-stat">
-                    <div class="impact-number">7</div>
-                    <div class="impact-label">Partner Schools</div>
-                </div>
-                <div class="impact-stat">
-                    <div class="impact-number">2</div>
-                    <div class="impact-label">Countries Served</div>
-                </div>
-                <div class="impact-stat">
-                    <div class="impact-number">100%</div>
-                    <div class="impact-label">Goes to Students</div>
-                </div>
+            <div class="reveal">
+                <p style="font-size: 1.05rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1.5rem;">Dr. James Kenechukwu Onwubalili dedicated his life to the pursuit of excellence and the belief that education is the most powerful instrument for change. The Foundation continues his legacy by providing scholarships, bursaries, and grants to academically gifted but financially disadvantaged students.</p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: var(--text-light);">Every donation, no matter the size, directly supports a student&rsquo;s educational journey. Your contribution helps cover tuition fees, educational resources, and living costs &mdash; eliminating the financial barriers that stand between talented students and their potential.</p>
             </div>
         </div>
     </section>
 
-    <!-- Donation Tiers -->
-    <section class="section">
-        <div class="section-inner">
-            <div class="section-header reveal">
-                <span class="section-label">Ways to Give</span>
-                <h2 class="section-title">Donation Tiers</h2>
-                <div class="gold-line-centre"></div>
-                <p class="section-subtitle" style="margin: 0 auto;">Choose a level of support that is meaningful to you. Every contribution makes a lasting difference in a student's life.</p>
-            </div>
-            <div class="donation-tiers">
-                <div class="tier-card reveal">
-                    <h3>Friend</h3>
-                    <div class="tier-amount">&pound;50</div>
-                    <p>Helps provide essential educational materials — books, stationery, and resources — to a scholarship recipient for a term.</p>
-                    <a href="#bank-transfer" class="btn btn-navy">Donate &pound;50</a>
+    <!-- Impact Stats -->
+    <section style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 5rem 4rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: -30%; right: -10%; width: 50%; height: 150%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 2.5rem;">Your Impact</h2>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div>
+                    <div style="font-family: var(--serif); font-size: 4rem; font-weight: 200; color: #fff; line-height: 1;">20+</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6);">Scholarships Awarded</div>
                 </div>
-                <div class="tier-card featured reveal">
-                    <span class="tier-badge">Most Popular</span>
-                    <h3>Patron</h3>
-                    <div class="tier-amount">&pound;250</div>
-                    <p>Contributes towards a partial scholarship, covering a significant portion of a student's tuition fees for one academic term.</p>
+                <div>
+                    <div style="font-family: var(--serif); font-size: 4rem; font-weight: 200; color: #fff; line-height: 1;">7</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6);">Partner Schools</div>
+                </div>
+                <div>
+                    <div style="font-family: var(--serif); font-size: 4rem; font-weight: 200; color: #fff; line-height: 1;">2</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6);">Countries Served</div>
+                </div>
+                <div>
+                    <div style="font-family: var(--serif); font-size: 4rem; font-weight: 200; color: #fff; line-height: 1;">100%</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6);">Goes to Students</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Tiers + Custom Amount -->
+    <section style="background: #fff; padding: 7rem 4rem;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Ways to Give</h2>
+                <p style="font-family: var(--serif); font-size: 3.2rem; font-weight: 200; line-height: 1.12; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 1rem;">Choose Your Level of Support</p>
+                <p style="font-size: 1rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">Every contribution makes a lasting difference in a student&rsquo;s life.</p>
+            </div>
+
+            <!-- Tier Cards -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 4rem;">
+                <div class="tier reveal">
+                    <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;">Friend</p>
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--navy); margin-bottom: 1rem;">&pound;50</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-light); margin-bottom: 2rem;">Helps provide essential educational materials &mdash; books, stationery, and resources &mdash; to a scholarship recipient for a term.</p>
+                    <a href="#bank-transfer" class="btn btn-outline-navy">Donate &pound;50</a>
+                </div>
+                <div class="tier tier-featured reveal">
+                    <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; margin-top: 0.5rem;">Patron</p>
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--navy); margin-bottom: 1rem;">&pound;250</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-light); margin-bottom: 2rem;">Contributes towards a partial scholarship, covering a significant portion of a student&rsquo;s tuition fees for one academic term.</p>
                     <a href="#bank-transfer" class="btn btn-gold">Donate &pound;250</a>
                 </div>
-                <div class="tier-card reveal">
-                    <h3>Benefactor</h3>
-                    <div class="tier-amount">&pound;1,000+</div>
-                    <p>Provides a full scholarship for an academically gifted student, covering tuition, materials, and maintenance support for a year.</p>
-                    <a href="#bank-transfer" class="btn btn-navy">Donate &pound;1,000</a>
+                <div class="tier reveal">
+                    <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;">Benefactor</p>
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--navy); margin-bottom: 1rem;">&pound;1,000+</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 0.9rem; line-height: 1.7; color: var(--text-light); margin-bottom: 2rem;">Provides a full scholarship for an academically gifted student, covering tuition, materials, and maintenance support for a year.</p>
+                    <a href="#bank-transfer" class="btn btn-outline-navy">Donate &pound;1,000</a>
+                </div>
+            </div>
+
+            <!-- Custom Amount -->
+            <div class="reveal" style="text-align: center; padding: 3rem; background: var(--cream); border-radius: 16px;">
+                <h3 style="font-family: var(--serif); font-size: 1.6rem; font-weight: 200; color: var(--navy); margin-bottom: 0.5rem;">Choose Your Own Amount</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 2rem;">Every contribution, no matter the size, makes a difference.</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <span style="font-family: var(--serif); font-size: 2.5rem; font-weight: 200; color: var(--navy);">&pound;</span>
+                    <input type="number" class="custom-amount-input" placeholder="0" min="1">
+                    <a href="#bank-transfer" class="btn btn-navy">Donate</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Bank Transfer Details -->
-    <section class="section section-cream" id="bank-transfer">
-        <div class="section-inner">
-            <div class="bank-details reveal">
-                <span class="section-label" style="text-align: center; display: block;">Bank Transfer</span>
-                <h3>Donate via Bank Transfer</h3>
-                <div class="gold-line-centre"></div>
-                <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">For direct bank transfers, please use the details below and include your name as the payment reference.</p>
-                <div class="bank-details-grid">
-                    <div class="bank-card">
-                        <h4>United Kingdom</h4>
-                        <div class="gold-line"></div>
-                        <p><strong>Account Name:</strong> James Kenechukwu Onwubalili Foundation (UK)</p>
-                        <p><strong>Bank:</strong> [To be provided]</p>
-                        <p><strong>Sort Code:</strong> [To be provided]</p>
-                        <p><strong>Account Number:</strong> [To be provided]</p>
-                    </div>
-                    <div class="bank-card">
-                        <h4>Nigeria</h4>
-                        <div class="gold-line" style="background: var(--green);"></div>
-                        <p><strong>Account Name:</strong> James Kenechukwu Onwubalili Foundation</p>
-                        <p><strong>Bank:</strong> Zenith Bank</p>
-                        <p><strong>Account Number:</strong> 1313476410</p>
-                    </div>
+    <section style="background: var(--cream); padding: 6rem 4rem;" id="bank-transfer">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Bank Transfer</h2>
+                <p style="font-family: var(--serif); font-size: 1.6rem; font-weight: 200; color: var(--navy); margin-bottom: 1rem;">Donate Directly</p>
+                <p style="font-size: 1rem; color: var(--text-light);">Please include your name as the payment reference.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div class="reveal" style="background: #fff; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-top: 4px solid var(--navy);">
+                    <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;">United Kingdom</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.4rem;"><strong style="color: var(--navy);">Account Name:</strong> James Kenechukwu Onwubalili Foundation (UK)</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.4rem;"><strong style="color: var(--navy);">Bank:</strong> [To be provided]</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.4rem;"><strong style="color: var(--navy);">Sort Code:</strong> [To be provided]</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light);"><strong style="color: var(--navy);">Account Number:</strong> [To be provided]</p>
+                </div>
+                <div class="reveal" style="background: #fff; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border-top: 4px solid #2a6e4e;">
+                    <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;">Nigeria</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.4rem;"><strong style="color: var(--navy);">Account Name:</strong> James Kenechukwu Onwubalili Foundation</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 0.4rem;"><strong style="color: var(--navy);">Bank:</strong> Zenith Bank</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light);"><strong style="color: var(--navy);">Account Number:</strong> 1313476410</p>
+                    <p style="font-size: 0.8rem; font-style: italic; color: var(--text-light); opacity: 0.7; margin-top: 1rem;">Registered with the Corporate Affairs Commission in Nigeria (Registration: 7061941)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Online Payment Placeholder -->
-    <section class="section">
-        <div class="section-inner">
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;" class="reveal">
-                <span class="section-label">Online Giving</span>
-                <h2 class="section-title" style="font-size: 2.2rem;">Online Donations</h2>
-                <div class="gold-line-centre"></div>
-                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 2rem;">Online card payments via Stripe will be available shortly. In the meantime, please use the bank transfer details above or contact us directly to arrange your donation.</p>
-                <a href="contact.html" class="btn btn-navy">Contact Us to Donate</a>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA -->
-    <section class="cta-section">
-        <div class="reveal">
-            <span class="section-label">Questions?</span>
-            <h2>We Are Here to Help</h2>
-            <div class="gold-line-centre"></div>
-            <p>If you have any questions about donating, Gift Aid, or how your contribution will be used, please do not hesitate to get in touch.</p>
-            <a href="contact.html" class="btn btn-navy">Contact the Foundation</a>
+    <section style="background: linear-gradient(135deg, #1a4f38 0%, #2a6e4e 40%, #1d5c40 100%); padding: 6rem 4rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+        <div class="reveal" style="position: relative; z-index: 1; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Questions?</h2>
+            <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">We Are Here to Help</p>
+            <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; line-height: 1.8;">If you have any questions about donating, Gift Aid, or how your contribution will be used, please do not hesitate to get in touch.</p>
+            <a href="contact.html" class="btn btn-gold">Contact the Foundation</a>
         </div>
     </section>
 
@@ -204,4 +250,13 @@
                     <p><strong>Web:</strong> www.jameskofoundation.org</p>
                     <p class="footer-legal">Registered as a Charitable Incorporated Organisation in England and Wales</p>
                 </div>
-         
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 James Kenechukwu Onwubalili Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
