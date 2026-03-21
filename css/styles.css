@@ -1423,6 +1423,18 @@ h1, h2, h3, h4, h5, h6 {
     .quote-text {
         font-size: 1.6rem;
     }
+
+    /* Tablet: inline 4-col grids → 2-col */
+    [style*="grid-template-columns: repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
+
+    /* Tablet: reduce inline paddings */
+    [style*="padding: 6rem 4rem"],
+    [style*="padding: 7rem 4rem"],
+    [style*="padding: 8rem 4rem"],
+    [style*="padding: 5rem 4rem"] {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
 }
 
 /* Mobile (< 768px) */
@@ -1510,6 +1522,67 @@ h1, h2, h3, h4, h5, h6 {
     .footer {
         padding: 3rem 1.5rem 2rem;
     }
+
+    /* Mobile: all inline grids collapse */
+    [style*="grid-template-columns: repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
+    [style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
+    [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+    /* Mobile: reduce inline paddings */
+    [style*="padding: 6rem 4rem"],
+    [style*="padding: 7rem 4rem"],
+    [style*="padding: 8rem 4rem"],
+    [style*="padding: 5rem 4rem"] {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    /* Mobile: reduce large font sizes in inline styles */
+    [style*="font-size: 3.8rem"] { font-size: 2.2rem !important; }
+    [style*="font-size: 3.5rem"] { font-size: 2.2rem !important; }
+    [style*="font-size: 3.4rem"] { font-size: 2.2rem !important; }
+    [style*="font-size: 3.2rem"] { font-size: 2rem !important; }
+    [style*="font-size: 3rem"] { font-size: 1.8rem !important; }
+    [style*="font-size: 4.5rem"] { font-size: 2.8rem !important; }
+    [style*="font-size: 4rem"] { font-size: 2.5rem !important; }
+    [style*="font-size: 2.8rem"] { font-size: 1.8rem !important; }
+    [style*="font-size: 2.5rem"] { font-size: 1.6rem !important; }
+    [style*="font-size: 2.2rem"] { font-size: 1.5rem !important; }
+
+    /* Mobile: hero CTA buttons stack */
+    [style*="display: flex"][style*="gap: 1rem"] { flex-direction: column !important; align-items: center !important; }
+
+    /* Mobile: hero logo smaller */
+    #heroLogo { width: 180px !important; }
+
+    /* Mobile: hero foundation name */
+    .hero-foundation-name { font-size: 2rem !important; }
+    .hero-strapline { font-size: 1.1rem !important; }
+    .hero-description { font-size: 0.95rem !important; }
+
+    /* Mobile: hero split padding */
+    .hero-content { padding: 5rem 1.5rem 3rem !important; }
+
+    /* Mobile: pull quotes */
+    .pull-quote, .pull-quote-light { padding-left: 1.5rem !important; }
+    .pull-quote p, .pull-quote-light p { font-size: 1.1rem !important; }
+
+    /* Mobile: bio gallery 2 columns */
+    .bio-gallery { columns: 2 !important; }
+
+    /* Mobile: form inputs full width */
+    .custom-amount-input { width: 150px !important; font-size: 1.5rem !important; }
+
+    /* Mobile: tier cards */
+    .tier { padding: 2rem 1.5rem !important; }
+
+    /* Mobile: contact form grid */
+    .form-premium .btn { width: 100%; text-align: center; }
+
+    /* Mobile: reduce gaps */
+    [style*="gap: 5rem"] { gap: 2rem !important; }
+    [style*="gap: 4rem"] { gap: 2rem !important; }
+    [style*="gap: 3rem"] { gap: 1.5rem !important; }
 }
  
 /* --- Biography Gallery (Masonry) --- */ 
