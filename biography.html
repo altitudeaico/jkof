@@ -10,46 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .bio-gallery {
-            max-width: 900px;
-            margin: 0 auto;
-            columns: 3;
-            column-gap: 1.2rem;
-        }
-        .bio-gallery figure {
-            margin: 0 0 1.2rem 0;
-            break-inside: avoid;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-            background: #fff;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .bio-gallery figure:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-        .bio-gallery figure img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        .bio-gallery figcaption {
-            padding: 0.7rem 1rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 0.95rem;
-            font-style: italic;
-            color: #666;
-            text-align: center;
-        }
-        .section-cream {
-            background: #F5E6D3;
-        }
-        @media (max-width: 767px) {
-            .bio-gallery {
-                columns: 2;
-            }
-        }
+        /* Premium buttons */
+        .btn { position: relative; overflow: hidden; border-radius: 50px !important; padding: 1.1rem 3rem !important; font-size: 0.75rem !important; letter-spacing: 2.5px !important; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; z-index: 1; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; z-index: -1; }
+        .btn:hover::before { left: 100%; }
+        .btn-gold { background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important; color: var(--navy) !important; font-weight: 700 !important; box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-gold:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45) !important; }
+        .btn-navy { background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--navy) 100%) !important; color: #fff !important; box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .btn-navy:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(0, 71, 171, 0.45) !important; }
+        .nav-cta { border-radius: 50px !important; background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 100%) !important; box-shadow: 0 2px 10px rgba(255, 191, 0, 0.25) !important; }
+        .nav-cta:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 20px rgba(255, 191, 0, 0.4) !important; }
+
+        /* Bio prose */
+        .bio-prose { max-width: 780px; margin: 0 auto; }
+        .bio-prose p { font-size: 1.05rem; line-height: 1.9; color: var(--text-light); margin-bottom: 1.5rem; }
+        .bio-prose strong { color: var(--navy); }
+
+        /* Section headings in bio */
+        .bio-heading { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.3rem; }
+        .bio-subheading { font-family: var(--serif); font-size: 1.6rem; font-weight: 200; color: var(--navy); margin-bottom: 1.5rem; letter-spacing: -0.3px; }
+
+        /* Pull quote */
+        .pull-quote { border-left: 4px solid var(--gold); padding: 2rem 0 2rem 2.5rem; margin: 2.5rem 0; }
+        .pull-quote p { font-family: var(--serif) !important; font-size: 1.4rem !important; font-weight: 300; font-style: italic; line-height: 1.6 !important; color: var(--navy) !important; }
+
+        /* Pull quote on dark bg */
+        .pull-quote-light { border-left: 4px solid var(--gold); padding: 2rem 0 2rem 2.5rem; margin: 2.5rem 0; }
+        .pull-quote-light p { font-family: var(--serif) !important; font-size: 1.4rem !important; font-weight: 300; font-style: italic; line-height: 1.6 !important; color: var(--gold) !important; }
+
+        /* Gallery */
+        .bio-gallery { max-width: 900px; margin: 0 auto; columns: 3; column-gap: 1.2rem; }
+        .bio-gallery figure { margin: 0 0 1.2rem 0; break-inside: avoid; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.1); background: #fff; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .bio-gallery figure:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+        .bio-gallery figure img { display: block; width: 100%; height: auto; }
+        .bio-gallery figcaption { padding: 0.7rem 1rem; font-family: var(--serif); font-size: 0.95rem; font-style: italic; color: #666; text-align: center; }
+        @media (max-width: 767px) { .bio-gallery { columns: 2; } }
     </style>
 </head>
 <body>
@@ -96,130 +91,163 @@
     </div>
 
     <!-- Page Hero -->
-    <section class="page-hero">
-        <span class="section-label" style="color: var(--gold);">1947 &mdash; 2017</span>
-        <h1>Dr. James Kenechukwu Onwubalili</h1>
-        <div class="gold-line-centre"></div>
-        <p>MD FRCP &mdash; Senior Consultant Physician and Nephrologist. A life defined by excellence, humility, sacrifice and an unwavering commitment to education.</p>
+    <section class="page-hero" style="position: relative; overflow: hidden; padding: 12rem 4rem 6rem;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 60%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1; text-align: center;">
+            <p style="font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">1947 &mdash; 2017</p>
+            <h1 style="font-family: var(--serif); font-size: 4rem; font-weight: 200; letter-spacing: -0.5px; margin-bottom: 1rem;">Dr. James Kenechukwu Onwubalili</h1>
+            <div class="gold-line-centre"></div>
+            <p style="font-family: var(--serif); font-size: 1.3rem; font-weight: 300; opacity: 0.85; max-width: 700px; margin: 0 auto;">MD FRCP &mdash; Senior Consultant Physician and Nephrologist.<br>A life defined by excellence, humility, sacrifice and an unwavering commitment to education.</p>
+        </div>
     </section>
 
-    <!-- Biography Content -->
-    <section class="section">
-        <div class="section-inner bio-content">
-
+    <!-- Early Life -->
+    <section style="background: #fff; padding: 6rem 4rem;">
+        <div class="bio-prose">
             <div class="reveal">
-                <h2>Early Life and Education</h2>
-                <div class="gold-line"></div>
+                <h2 class="bio-heading">Early Life</h2>
+                <p class="bio-subheading">From Ogidi to Government College Umuahia</p>
+            </div>
+            <div class="reveal">
                 <p>James Kenechukwu Onwubalili (known as &ldquo;JK&rdquo;) was born on <strong>24 April 1947</strong> in <strong>Ogidi, Anambra State, Nigeria</strong>. Tragically, he lost his father, <strong>Rev. James Onwubalili</strong>, when he was just three years old in 1950. This loss made paying JK&rsquo;s school fees a significant challenge, as his widowed mother&rsquo;s limited earnings were insufficient.</p>
                 <p>After completing his primary education at <strong>Ebenezer Primary School in Ogidi</strong>, JK was admitted to one of Nigeria&rsquo;s finest male colleges, <strong>Government College Umuahia</strong>. There, he excelled through hard work and determination. To complete his secondary education, JK received financial assistance from his uncles, occasional gifts from philanthropists and his mother&rsquo;s modest savings.</p>
                 <p>His undergraduate studies at the <strong>University of Ibadan</strong> were interrupted by the <strong>Biafran civil war</strong>. During the conflict he joined the <strong>Biafran army</strong>, rising to the rank of captain, and returned to complete his medical education after the war. James was an outstanding student; he won several prizes and qualified <strong>MB BS in 1975</strong> with distinction. As the top student in his class, he was awarded the prestigious <strong>Victor Ludorum</strong>, collecting medals for medicine, obstetrics, child health and pathology.</p>
             </div>
-
-            <div class="reveal">
-                <h2>Medical Training and Early Career</h2>
-                <div class="gold-line"></div>
-                <p>After his MBBS, JK travelled to the UK for postgraduate studies specialising in nephrology. He trained in renal medicine at some of London&rsquo;s top universities. His first post was as a renal <strong>senior house officer (SHO)</strong> at <strong>Hammersmith Hospital</strong>. He subsequently worked as a renal SHO at <strong>Northwick Park Hospital</strong>, gained the <strong>Membership of the Royal College of Physicians (MRCP)</strong> in <strong>1979</strong>, and served as a renal registrar at the old <strong>3Ps institute (St Peter&rsquo;s, St Paul&rsquo;s and St Philip&rsquo;s hospitals) from 1979 to 1981</strong>. James was then appointed <strong>Medical Research Council research fellow</strong> at Northwick Park; in 1984, he earned his <strong>Doctor of Medicine (MD)</strong> after successful research on <em>&ldquo;A Spectrum of Immunity in Tuberculosis.&rdquo;</em></p>
-                <p>While working in London he married <strong>Vivian Eruchalu</strong> in <strong>1981</strong>; they had <strong>two sons (James and David) and a daughter (Chioma)</strong>. In <strong>1984</strong> he returned to Nigeria and set up <strong>the first dialysis unit in Enugu</strong>, pioneering both haemodialysis and peritoneal dialysis services and training a new team of dialysis nurses and technicians. He also chaired the committee that combated a <strong>Lassa fever</strong> outbreak in <strong>1989</strong> and served as <strong>director of postgraduate education</strong> at the University of Nigeria medical school (1986&ndash;1989).</p>
-            </div>
-
-            <div class="reveal">
-                <h2>International Career and Contributions to Nephrology</h2>
-                <div class="gold-line"></div>
-                <p>In <strong>1989</strong> James moved to <strong>Saudi Arabia</strong> to work as a consultant nephrologist, while his wife and children returned to England to continue their education. In <strong>1995</strong> he was appointed <strong>Consultant Physician and Nephrologist at The Royal Free University Hospital and North Middlesex University Hospital in London</strong>, a position he held for twenty-one years. He collaborated with the Royal London Hospital to establish a new haemodialysis unit and became a strong advocate for better renal-care access for patients from ethnic minorities.</p>
-                <p>His genuine passion for medicine shone through his dedication and commitment. Over <strong>forty-two years</strong>, he served the profession in Nigeria, Saudi Arabia and the United Kingdom. He also served as a <strong>Tutor and Examiner for the Royal College of Physicians of London</strong> for decades, and worked as an <strong>associate professor</strong> for medical students from St George&rsquo;s University, Grenada. His colleagues describe him as a gentle, dignified physician who inspired loyalty and affection from patients and staff.</p>
-            </div>
-
-            <div class="reveal">
-                <h2>Research and Publications</h2>
-                <div class="gold-line"></div>
-                <p>JK was a prolific research scholar. According to Harzing&rsquo;s Publish or Perish software (2017), which looks up scholarly citations and calculates several citation and impact metrics, between 1978 and 1999 he had published well over <strong>30 research journal papers</strong> which were cited over <strong>700 times</strong> by his peers. JK was either the sole author or first named author in over <strong>85%</strong> of these publications &mdash; a remarkable record that reflects his intellectual rigour and leadership in the field.</p>
-            </div>
-
-            <div class="reveal">
-                <h2>Honours and Achievements</h2>
-                <div class="gold-line"></div>
-                <p>Starting from humble beginnings in a deprived village school in Ogidi, JK eventually made it to the Royal College of Physicians of London. His exceptional contributions to medicine were recognised with numerous prestigious awards and honours:</p>
-                <h3>Fellow of the Royal College of Physicians</h3>
-                <p>He was elected a <strong>Fellow of the Royal College of Physicians</strong>, one of the most distinguished honours in British medicine, recognising his outstanding contributions to medical practice and scholarship.</p>
-                <h3>Gold Medal &mdash; Royal College of Physicians of Ireland</h3>
-                <p>He was awarded the Gold Medal by the Royal College of Physicians of Ireland, a rare and prestigious honour bestowed upon physicians who have made exceptional contributions to the advancement of medicine. He passed the <strong>MRCP with the highest score</strong> among candidates at the time.</p>
-            </div>
-
-            <div class="reveal">
-                <h2>Personal Life</h2>
-                <div class="gold-line"></div>
-                <p>Beyond his professional achievements, Dr. Onwubalili was a devoted family man. He married Dr. (Mrs.) Vivian Onwubalili (n&eacute;e Onyemelukwe), herself a distinguished medical professional. Together, they raised a family that continues to uphold the values of excellence, service, and education that defined his life.</p>
-                <p>James was delighted when <strong>all three of his children entered medical school</strong>, qualifying from University College London Hospitals. His sons, Dr. Emeka Onwubalili and David Onwubalili, carry forward his legacy &mdash; Emeka as an NHS consultant and David as a communications professional. The determination of his widow Vivian and their children have been instrumental to the realisation of the JKO Foundation.</p>
-            </div>
-
-            <div class="reveal">
-                <h2>Legacy</h2>
-                <div class="gold-line"></div>
-                <p>Dr. James Kenechukwu Onwubalili died peacefully at home on <strong>4 May 2017</strong> at the age of 70, surrounded by his family. Tributes from colleagues and former trainees emphasise his patience, enthusiasm for teaching and enduring pride in his children.</p>
-                <p>Without the support of philanthropists during his early education, JK might not have achieved his remarkable success and become a pillar of support for many people and families. The James Kenechukwu Onwubalili Foundation aims to formalise and continue a cause James quietly pursued throughout his life &mdash; generously supporting the education of less privileged children through financial assistance, a mission that brought him immense satisfaction.</p>
-                <p><strong>Dr. J.K. Onwubalili&rsquo;s legacy of excellence, humility, sacrifice and dignity will forever resound in the minds of those who knew him well.</strong></p>
-            </div>
-
         </div>
     </section>
 
-    <!-- Photo Gallery — Masonry Layout -->
-    <section class="section section-cream">
-        <div class="section-inner" style="text-align: center; margin-bottom: 3rem;">
-            <span class="section-label">A Life in Pictures</span>
-            <h2 class="section-title">Memories of Dr. JK</h2>
-            <div class="gold-line-centre"></div>
-        </div>
-        <div class="section-inner">
-            <div class="bio-gallery">
-                <figure>
-                    <img src="bio/images/5.jpg" alt="Young James Kenechukwu Onwubalili as a schoolboy in Nigeria">
-                    <figcaption>Early years in Nigeria</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/3.jpg" alt="Dr. JK outside the Post Graduate Medical School, London">
-                    <figcaption>Post Graduate Medical School, London</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/4.jpg" alt="James and Vivian Onwubalili on their wedding day, 1981">
-                    <figcaption>Wedding day, 1981</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/2.jpg" alt="Dr. JK in academic regalia at his doctorate ceremony">
-                    <figcaption>Doctorate ceremony</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/1.jpg" alt="Dr. JK — professional portrait during his consultant years">
-                    <figcaption>Consultant physician</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/2.2.jpg" alt="Dr. JK sharing a tender embrace with a family member">
-                    <figcaption>A devoted family man</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/1.1.jpg" alt="The Onwubalili family on holiday together">
-                    <figcaption>Family holiday</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/1.2.jpg" alt="Dr. JK at a formal celebration with friends and family">
-                    <figcaption>Celebrating with loved ones</figcaption>
-                </figure>
-                <figure>
-                    <img src="bio/images/2.1.jpg" alt="The Onwubalili family at a wedding celebration">
-                    <figcaption>Family celebration</figcaption>
-                </figure>
+    <!-- Medical Career — on green -->
+    <section style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 6rem 4rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: -30%; right: -10%; width: 50%; height: 150%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="max-width: 780px; margin: 0 auto; position: relative; z-index: 1;">
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.3rem;">Medical Career</h2>
+                <p style="font-family: var(--serif); font-size: 1.6rem; font-weight: 200; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem;">From London&rsquo;s Teaching Hospitals to the Royal College</p>
             </div>
+            <div class="reveal">
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">After his MBBS, JK travelled to the UK for postgraduate studies specialising in nephrology. He trained in renal medicine at some of London&rsquo;s top universities. His first post was as a renal <strong style="color: #fff;">senior house officer (SHO)</strong> at <strong style="color: #fff;">Hammersmith Hospital</strong>. He subsequently worked as a renal SHO at <strong style="color: #fff;">Northwick Park Hospital</strong>, gained the <strong style="color: #fff;">Membership of the Royal College of Physicians (MRCP)</strong> in <strong style="color: #fff;">1979</strong>, and served as a renal registrar at the old <strong style="color: #fff;">3Ps institute (St Peter&rsquo;s, St Paul&rsquo;s and St Philip&rsquo;s hospitals) from 1979 to 1981</strong>.</p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">James was then appointed <strong style="color: #fff;">Medical Research Council research fellow</strong> at Northwick Park; in 1984, he earned his <strong style="color: #fff;">Doctor of Medicine (MD)</strong> after successful research on <em>&ldquo;A Spectrum of Immunity in Tuberculosis.&rdquo;</em></p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">While working in London he married <strong style="color: #fff;">Vivian Eruchalu</strong> in <strong style="color: #fff;">1981</strong>; they had <strong style="color: #fff;">two sons (James and David) and a daughter (Chioma)</strong>. In <strong style="color: #fff;">1984</strong> he returned to Nigeria and set up <strong style="color: #fff;">the first dialysis unit in Enugu</strong>, pioneering both haemodialysis and peritoneal dialysis services. He also chaired the committee that combated a <strong style="color: #fff;">Lassa fever</strong> outbreak in <strong style="color: #fff;">1989</strong>.</p>
+            </div>
+
+            <div class="pull-quote-light reveal">
+                <p>His genuine passion for medicine shone through his dedication and commitment. Over forty-two years, he served the profession in Nigeria, Saudi Arabia and the United Kingdom.</p>
+            </div>
+
+            <div class="reveal">
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">In <strong style="color: #fff;">1989</strong> James moved to <strong style="color: #fff;">Saudi Arabia</strong> to work as a consultant nephrologist. In <strong style="color: #fff;">1995</strong> he was appointed <strong style="color: #fff;">Consultant Physician and Nephrologist at The Royal Free University Hospital and North Middlesex University Hospital in London</strong>, a position he held for twenty-one years. He also served as a <strong style="color: #fff;">Tutor and Examiner for the Royal College of Physicians of London</strong> for decades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Honours — white -->
+    <section style="background: #fff; padding: 6rem 4rem;">
+        <div class="bio-prose">
+            <div class="reveal">
+                <h2 class="bio-heading">Research &amp; Publications</h2>
+                <p class="bio-subheading">A prolific scholar</p>
+            </div>
+            <div class="reveal">
+                <p>JK was a prolific research scholar. According to Harzing&rsquo;s Publish or Perish software (2017), between 1978 and 1999 he had published well over <strong>30 research journal papers</strong> which were cited over <strong>700 times</strong> by his peers. JK was either the sole author or first named author in over <strong>85%</strong> of these publications &mdash; a remarkable record that reflects his intellectual rigour and leadership in the field.</p>
+            </div>
+
+            <!-- Stats bar -->
+            <div class="reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; text-align: center;">
+                <div>
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); line-height: 1;">30+</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light);">Research Papers</div>
+                </div>
+                <div>
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); line-height: 1;">700+</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light);">Peer Citations</div>
+                </div>
+                <div>
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); line-height: 1;">85%</div>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0.5rem auto;"></div>
+                    <div style="font-family: var(--sans); font-size: 0.75rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light);">Sole/First Author</div>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <h2 class="bio-heading" style="margin-top: 3rem;">Honours &amp; Achievements</h2>
+                <p class="bio-subheading">Recognition at the highest level</p>
+            </div>
+            <div class="reveal">
+                <p>Starting from humble beginnings in a deprived village school in Ogidi, JK eventually made it to the Royal College of Physicians of London. His exceptional contributions to medicine were recognised with numerous prestigious awards:</p>
+            </div>
+            <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0;">
+                <div style="padding: 2rem; border-left: 4px solid var(--navy);">
+                    <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">Fellow of the Royal College of Physicians</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-light);">One of the most distinguished honours in British medicine, recognising his outstanding contributions to medical practice and scholarship.</p>
+                </div>
+                <div style="padding: 2rem; border-left: 4px solid var(--gold);">
+                    <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">Gold Medal &mdash; Royal College of Physicians</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-light);">A rare and prestigious honour. He passed the MRCP with the highest score among candidates at the time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Life & Legacy — cream -->
+    <section style="background: var(--cream); padding: 6rem 4rem;">
+        <div class="bio-prose">
+            <div class="reveal">
+                <h2 class="bio-heading">Personal Life</h2>
+                <p class="bio-subheading">A devoted family man</p>
+            </div>
+            <div class="reveal">
+                <p>Beyond his professional achievements, Dr. Onwubalili was a devoted family man. He married Dr. (Mrs.) Vivian Onwubalili (n&eacute;e Onyemelukwe), herself a distinguished medical professional. Together, they raised a family that continues to uphold the values of excellence, service, and education that defined his life.</p>
+                <p>James was delighted when <strong>all three of his children entered medical school</strong>, qualifying from University College London Hospitals. His sons, Dr. Emeka Onwubalili and David Onwubalili, carry forward his legacy &mdash; Emeka as an NHS consultant and David as a communications professional.</p>
+            </div>
+
+            <div class="reveal" style="margin-top: 3rem;">
+                <h2 class="bio-heading">Legacy</h2>
+                <p class="bio-subheading">A life that continues to inspire</p>
+            </div>
+            <div class="reveal">
+                <p>Dr. James Kenechukwu Onwubalili died peacefully at home on <strong>4 May 2017</strong> at the age of 70, surrounded by his family. Tributes from colleagues and former trainees emphasise his patience, enthusiasm for teaching and enduring pride in his children.</p>
+                <p>The James Kenechukwu Onwubalili Foundation aims to formalise and continue a cause James quietly pursued throughout his life &mdash; generously supporting the education of less privileged children through financial assistance, a mission that brought him immense satisfaction.</p>
+            </div>
+
+            <div class="pull-quote reveal">
+                <p>Dr. J.K. Onwubalili&rsquo;s legacy of excellence, humility, sacrifice and dignity will forever resound in the minds of those who knew him well.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section style="background: #fff; padding: 6rem 4rem;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+            <h2 class="bio-heading">A Life in Pictures</h2>
+            <p style="font-family: var(--serif); font-size: 3.2rem; font-weight: 200; line-height: 1.12; color: var(--navy); letter-spacing: -0.5px;">Memories of Dr. JK</p>
+        </div>
+        <div class="bio-gallery">
+            <figure><img src="bio/images/5.jpg" alt="Young James as a schoolboy in Nigeria"><figcaption>Early years in Nigeria</figcaption></figure>
+            <figure><img src="bio/images/3.jpg" alt="Dr. JK outside the Post Graduate Medical School, London"><figcaption>Post Graduate Medical School, London</figcaption></figure>
+            <figure><img src="bio/images/4.jpg" alt="James and Vivian on their wedding day, 1981"><figcaption>Wedding day, 1981</figcaption></figure>
+            <figure><img src="bio/images/2.jpg" alt="Dr. JK in academic regalia at his doctorate ceremony"><figcaption>Doctorate ceremony</figcaption></figure>
+            <figure><img src="bio/images/1.jpg" alt="Dr. JK — professional portrait"><figcaption>Consultant physician</figcaption></figure>
+            <figure><img src="bio/images/2.2.jpg" alt="Dr. JK sharing a tender embrace"><figcaption>A devoted family man</figcaption></figure>
+            <figure><img src="bio/images/1.1.jpg" alt="The Onwubalili family on holiday"><figcaption>Family holiday</figcaption></figure>
+            <figure><img src="bio/images/1.2.jpg" alt="Dr. JK at a formal celebration"><figcaption>Celebrating with loved ones</figcaption></figure>
+            <figure><img src="bio/images/2.1.jpg" alt="Family at a wedding celebration"><figcaption>Family celebration</figcaption></figure>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-        <div class="reveal">
-            <span class="section-label">Continue His Legacy</span>
-            <h2>Honour Dr. JK&rsquo;s Memory</h2>
-            <div class="gold-line-centre"></div>
-            <p>Help continue the work that Dr. James Kenechukwu Onwubalili believed in so deeply &mdash; empowering the next generation through education.</p>
-            <a href="donate.html" class="btn btn-navy">Support the Foundation</a>
+    <section style="background: linear-gradient(135deg, #1a4f38 0%, #2a6e4e 40%, #1d5c40 100%); padding: 8rem 4rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+        <div class="reveal" style="position: relative; z-index: 1;">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Continue His Legacy</h2>
+            <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">Honour Dr. JK&rsquo;s Memory</p>
+            <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Help continue the work that Dr. James Kenechukwu Onwubalili believed in so deeply &mdash; empowering the next generation through education.</p>
+            <a href="donate.html" class="btn btn-gold">Support the Foundation</a>
         </div>
     </section>
 
@@ -237,4 +265,13 @@
                     <p><strong>Web:</strong> www.jameskofoundation.org</p>
                     <p class="footer-legal">Registered as a Charitable Incorporated Organisation in England and Wales</p>
                 </div>
-         
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 James Kenechukwu Onwubalili Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
