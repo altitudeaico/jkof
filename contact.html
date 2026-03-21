@@ -9,6 +9,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Premium buttons */
+        .btn { position: relative; overflow: hidden; border-radius: 50px !important; padding: 1.1rem 3rem !important; font-size: 0.75rem !important; letter-spacing: 2.5px !important; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; z-index: 1; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; z-index: -1; }
+        .btn:hover::before { left: 100%; }
+        .btn-gold { background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important; color: var(--navy) !important; font-weight: 700 !important; box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-gold:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45) !important; }
+        .btn-navy { background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--navy) 100%) !important; color: #fff !important; box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .btn-navy:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(0, 71, 171, 0.45) !important; }
+        .nav-cta { border-radius: 50px !important; background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 100%) !important; box-shadow: 0 2px 10px rgba(255, 191, 0, 0.25) !important; }
+        .nav-cta:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 20px rgba(255, 191, 0, 0.4) !important; }
+
+        /* Premium form styling */
+        .form-premium label {
+            display: block;
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        .form-premium input,
+        .form-premium select,
+        .form-premium textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            font-family: var(--sans);
+            font-size: 0.95rem;
+            color: var(--text);
+            background: #fff;
+            border: 2px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .form-premium input:focus,
+        .form-premium select:focus,
+        .form-premium textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(255, 191, 0, 0.1);
+        }
+        .form-premium textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+        .form-premium select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.2rem center;
+            padding-right: 2.5rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -54,87 +112,102 @@
     </div>
 
     <!-- Page Hero -->
-    <section class="page-hero">
-        <h1>Contact Us</h1>
-        <div class="gold-line-centre"></div>
-        <p>We welcome your enquiries, partnership proposals, and expressions of interest. Get in touch with the Foundation today.</p>
+    <section class="page-hero" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 60%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1;">
+            <h1 style="font-family: var(--serif); font-size: 3.8rem; font-weight: 200; letter-spacing: -0.5px;">Contact Us</h1>
+            <div class="gold-line-centre"></div>
+            <p style="font-family: var(--serif); font-size: 1.3rem; font-weight: 300; opacity: 0.85;">We welcome your enquiries, partnership proposals,<br>and expressions of interest.</p>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section">
-        <div class="section-inner">
-            <div class="contact-grid">
+    <!-- Contact Form + Info -->
+    <section style="background: #fff; padding: 6rem 4rem;">
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;">
 
-                <!-- Contact Form -->
-                <div class="reveal">
-                    <span class="section-label">Send a Message</span>
-                    <h2 class="section-title" style="color: var(--navy); font-size: 2.2rem;">Get in Touch</h2>
-                    <div class="gold-line"></div>
-                    <p style="color: var(--text-light); margin-bottom: 2rem; line-height: 1.8;">Whether you have a question about our scholarships, wish to explore a partnership, or would like to support our work, we would be delighted to hear from you.</p>
+            <!-- Form -->
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.3rem;">Send a Message</h2>
+                <p style="font-family: var(--serif); font-size: 1.6rem; font-weight: 200; color: var(--navy); margin-bottom: 2rem;">Get in Touch</p>
 
-                    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                <div class="form-premium">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name">
 
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com">
 
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected>Please select a subject</option>
-                            <option value="General Enquiry">General Enquiry</option>
-                            <option value="Scholarship Information">Scholarship Information</option>
-                            <option value="Partnership Opportunity">Partnership Opportunity</option>
-                            <option value="Donation Enquiry">Donation Enquiry</option>
-                            <option value="Media & Press">Media &amp; Press</option>
-                            <option value="Other">Other</option>
-                        </select>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="" disabled selected>Please select a subject</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                        <option value="Scholarship Information">Scholarship Information</option>
+                        <option value="Partnership Opportunity">Partnership Opportunity</option>
+                        <option value="Donation Enquiry">Donation Enquiry</option>
+                        <option value="Media & Press">Media &amp; Press</option>
+                        <option value="Other">Other</option>
+                    </select>
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?"></textarea>
 
-                        <button type="submit" class="btn btn-navy">Send Message</button>
-                    </form>
+                    <button type="button" class="btn btn-navy">Send Message</button>
                 </div>
-
-                <!-- Contact Information -->
-                <div class="reveal">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="gold-line"></div>
-                        <p><strong>Phone:</strong> <a href="tel:+447506363431">+44 750 636 3431</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:info@jkofoundation.org">info@jkofoundation.org</a></p>
-                        <p><strong>Web:</strong> www.jameskofoundation.org</p>
-                    </div>
-
-                    <div class="contact-offices">
-                        <div class="office-card">
-                            <h4>United Kingdom Office</h4>
-                            <p><strong>James Kenechukwu Onwubalili Foundation (UK)</strong></p>
-                            <p>31 Brook Rise, Chigwell</p>
-                            <p>Essex IG7 6AP</p>
-                            <p>United Kingdom</p>
-                            <p style="margin-top: 0.5rem; font-style: italic; font-size: 0.85rem; opacity: 0.7;">Registered as a Charitable Incorporated Organisation in England and Wales</p>
-                        </div>
-                        <div class="office-card nigeria">
-                            <h4>Nigeria Office</h4>
-                            <p><strong>James Kenechukwu Onwubalili Foundation (NIG)</strong></p>
-                            <p>Peniel Building, No. 3, Ashabi Cole Street</p>
-                            <p>Central Business District, Alausa, Ikeja</p>
-                            <p>Nigeria</p>
-                            <p style="margin-top: 0.5rem;"><strong>Registration:</strong> 7061941</p>
-                        </div>
-                    </div>
-
-                    <div class="student-cta">
-                        <h3>For Students</h3>
-                        <div class="gold-line" style="background: var(--gold);"></div>
-                        <p>Are you an academically gifted student in need of financial support? The Foundation provides scholarships through our partner schools. Contact us to learn more about eligibility and the application process.</p>
-                        <a href="about.html" class="btn btn-gold">Learn About Our Scholarships</a>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Info -->
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.3rem;">Contact Information</h2>
+                <p style="font-family: var(--serif); font-size: 1.6rem; font-weight: 200; color: var(--navy); margin-bottom: 2rem;">One Mission, Two Countries</p>
+
+                <!-- Office -->
+                <div style="padding: 2rem; border-left: 4px solid var(--navy); margin-bottom: 2rem;">
+                    <p style="font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;">United Kingdom Office</p>
+                    <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;"><strong style="color: var(--navy);">James Kenechukwu Onwubalili Foundation (UK)</strong></p>
+                    <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;">31 Brook Rise, Chigwell<br>Essex IG7 6AP<br>United Kingdom</p>
+                    <p style="font-size: 0.85rem; font-style: italic; color: var(--text-light); opacity: 0.7; margin-top: 0.5rem;">Registered as a Charitable Incorporated Organisation in England and Wales</p>
+                </div>
+
+                <!-- Contact details -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                    <div style="padding: 1.5rem; background: var(--cream); border-radius: 12px;">
+                        <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;">Phone</p>
+                        <p style="font-size: 1rem; color: var(--navy); font-weight: 500;">+44 750 636 3431</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: var(--cream); border-radius: 12px;">
+                        <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;">Email</p>
+                        <p style="font-size: 1rem; color: var(--navy); font-weight: 500;">info&#64;jkofoundation.org</p>
+                    </div>
+                </div>
+
+                <!-- Office hours -->
+                <div style="padding: 2rem; background: var(--cream); border-radius: 12px; margin-bottom: 2.5rem;">
+                    <p style="font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;">Office Hours</p>
+                    <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;">We respond to all enquiries within 1&ndash;2 business days.</p>
+                </div>
+
+                <!-- Nigeria link -->
+                <div style="padding: 2rem; border-left: 4px solid #2a6e4e;">
+                    <p style="font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;">Nigeria Enquiries</p>
+                    <p style="font-size: 1rem; color: var(--text-light); line-height: 1.8;">For enquiries relating to the affiliate foundation in Nigeria, please visit the dedicated Nigeria page.</p>
+                    <a href="nigeria.html" style="display: inline-block; margin-top: 1rem; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #2a6e4e; transition: all 0.3s ease;">Visit Nigeria Foundation &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- For Students CTA -->
+    <section style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 6rem 4rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+        <div class="reveal" style="position: relative; z-index: 1; max-width: 700px; margin: 0 auto;">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">For Students</h2>
+            <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">Are You an Aspiring Scholar?</p>
+            <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; line-height: 1.8;">If you are an academically gifted student in need of financial support, the Foundation provides scholarships through our partner schools. Contact us to learn more about eligibility and the application process.</p>
+            <a href="about.html" class="btn btn-gold">Learn About Our Scholarships</a>
         </div>
     </section>
 
@@ -148,7 +221,7 @@
                     <p><strong>James Kenechukwu Onwubalili Foundation (UK)</strong></p>
                     <p>31 Brook Rise, Chigwell<br>Essex IG7 6AP<br>United Kingdom</p>
                     <p><strong>Phone:</strong> +44 750 636 3431</p>
-                    <p><strong>Email:</strong> info@jkofoundation.org</p>
+                    <p><strong>Email:</strong> info&#64;jkofoundation.org</p>
                     <p><strong>Web:</strong> www.jameskofoundation.org</p>
                     <p class="footer-legal">Registered as a Charitable Incorporated Organisation in England and Wales</p>
                 </div>
