@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — JKOF</title>
-    <meta name="description" content="Learn about the James Kenechukwu Onwubalili Foundation's mission, vision, and objectives for empowering students through education.">
+    <meta name="description" content="Learn about the James Kenechukwu Onwubalili Foundation's mission, vision, and how we empower students through education.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Premium buttons */
+        .btn { position: relative; overflow: hidden; border-radius: 50px !important; padding: 1.1rem 3rem !important; font-size: 0.75rem !important; letter-spacing: 2.5px !important; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; z-index: 1; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; z-index: -1; }
+        .btn:hover::before { left: 100%; }
+        .btn-gold { background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important; color: var(--navy) !important; font-weight: 700 !important; box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-gold:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-navy { background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--navy) 100%) !important; color: #fff !important; box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .btn-navy:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(0, 71, 171, 0.45), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .nav-cta { border-radius: 50px !important; background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 100%) !important; box-shadow: 0 2px 10px rgba(255, 191, 0, 0.25) !important; }
+        .nav-cta:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 20px rgba(255, 191, 0, 0.4) !important; }
+    </style>
 </head>
 <body>
 
@@ -57,51 +69,26 @@
     <section class="page-hero">
         <h1>About the Foundation</h1>
         <div class="gold-line-centre"></div>
-        <p>Empowering academically gifted students through scholarships, bursaries, and educational support in the United Kingdom and Nigeria.</p>
+        <p>Empowering academically gifted students through scholarships, bursaries, and educational support in the United Kingdom.</p>
     </section>
 
     <!-- Mission & Vision -->
-    <section class="section">
-        <div class="section-inner">
-            <div class="section-header reveal">
-                <span class="section-label">Our Purpose</span>
-                <h2 class="section-title">Mission &amp; Vision</h2>
-                <div class="gold-line-centre"></div>
+    <section style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 5rem 4rem; position: relative; overflow: hidden;">
+        <!-- Texture -->
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: -30%; right: -10%; width: 50%; height: 150%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; position: relative; z-index: 1;">
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Our Mission</h2>
+                <div style="width: 60px; height: 3px; background: var(--gold); margin: 1rem 0;"></div>
+                <p style="font-family: var(--serif); font-size: 1.4rem; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.95);">To inspire, empower and transform lives through educational opportunities</p>
+                <p style="font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.75); margin-top: 1.5rem;">The Foundation honours the legacy of Dr. James Kenechukwu Onwubalili by providing educational scholarships, bursaries, and grants to academically gifted but financially disadvantaged students in the United Kingdom, enabling them to achieve their full potential and contribute meaningfully to society.</p>
             </div>
-            <div class="mission-vision">
-                <div class="mv-card card reveal">
-                    <h3>Our Mission</h3>
-                    <div class="gold-line"></div>
-                    <p>To honour the legacy of Dr. James Kenechukwu Onwubalili by providing educational scholarships, bursaries, and grants to academically gifted but financially disadvantaged students in the United Kingdom and Nigeria, enabling them to achieve their full potential and contribute meaningfully to society.</p>
-                </div>
-                <div class="mv-card card reveal">
-                    <h3>Our Vision</h3>
-                    <div class="gold-line"></div>
-                    <p>A world where every academically talented student, regardless of their financial background, has the opportunity to access quality education and fulfil their potential. We envision communities transformed by the ripple effects of empowered, educated individuals who go on to make significant contributions to their fields and societies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Objectives -->
-    <section class="section section-cream">
-        <div class="section-inner">
-            <div class="two-col-centre">
-                <div class="reveal">
-                    <span class="section-label">What We Do</span>
-                    <h2 class="section-title" style="color: var(--navy);">Our Objectives</h2>
-                    <div class="gold-line"></div>
-                    <p class="section-subtitle">The Foundation pursues its mission through clearly defined objectives that guide our scholarship programmes and educational initiatives.</p>
-                </div>
-                <div class="reveal">
-                    <ul class="objectives-list">
-                        <li>To provide scholarships, bursaries, and educational grants to academically gifted students who lack financial means</li>
-                        <li>To support students at secondary and tertiary levels of education in the United Kingdom and Nigeria</li>
-                        <li>To partner with schools and educational institutions to identify and nurture exceptional talent</li>
-                        <li>To offer maintenance grants and living allowances to support students throughout their studies</li>
-                        <li>To celebrate and perpetuate the legacy of Dr. James Kenechukwu Onwubalili through educational empowerment</li>
-                    </ul>
-                </div>
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Our Vision</h2>
+                <div style="width: 60px; height: 3px; background: var(--gold); margin: 1rem 0;"></div>
+                <p style="font-family: var(--serif); font-size: 1.4rem; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.95);">A world where talent flourishes regardless of circumstance</p>
+                <p style="font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.75); margin-top: 1.5rem;">We envision a world where every academically talented student, regardless of their financial background, has the opportunity to access quality education and fulfil their potential. Communities transformed by the ripple effects of empowered, educated individuals who go on to make significant contributions to their fields and societies.</p>
             </div>
         </div>
     </section>
@@ -109,15 +96,15 @@
     <!-- How We Help -->
     <section class="section">
         <div class="section-inner">
-            <div class="section-header reveal">
-                <span class="section-label">Our Support</span>
-                <h2 class="section-title">How We Help</h2>
+            <div class="section-header reveal" style="text-align: center;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">How We Help</h2>
+                <p style="font-family: var(--serif); font-size: 2.8rem; font-weight: 200; line-height: 1.15; color: var(--navy); margin-bottom: 1.5rem;">Supporting Students at Every Stage</p>
                 <div class="gold-line-centre"></div>
             </div>
             <div class="help-grid">
                 <div class="help-card reveal">
                     <h3>Scholarships</h3>
-                    <p>Full and partial scholarships covering tuition fees for outstanding students at secondary and tertiary institutions in the UK and Nigeria.</p>
+                    <p>Full and partial scholarships covering tuition fees for outstanding students at secondary and tertiary institutions in the UK.</p>
                 </div>
                 <div class="help-card reveal">
                     <h3>Bursaries</h3>
@@ -138,34 +125,37 @@
     <!-- Geographic Focus -->
     <section class="section section-cream">
         <div class="section-inner">
-            <div class="section-header reveal">
-                <span class="section-label">Where We Operate</span>
-                <h2 class="section-title">Geographic Focus</h2>
+            <div class="section-header reveal" style="text-align: center;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Where We Operate</h2>
+                <p style="font-family: var(--serif); font-size: 2.8rem; font-weight: 200; line-height: 1.15; color: var(--navy); margin-bottom: 1.5rem;">Geographic Focus</p>
                 <div class="gold-line-centre"></div>
             </div>
             <div class="geo-grid">
                 <div class="geo-card card reveal">
                     <h3>United Kingdom</h3>
                     <div class="gold-line"></div>
-                    <p>JKOF (UK) is registered as a Charitable Incorporated Organisation in England and Wales. We work with partner schools and institutions across the UK to identify and support exceptional students from disadvantaged backgrounds, providing scholarships, bursaries, and maintenance grants.</p>
+                    <p>JKOF (UK) is registered as a Charitable Incorporated Organisation in England and Wales (2026). As the parent foundation, we work with partner schools and institutions across the UK to identify and support exceptional students from disadvantaged backgrounds, providing scholarships, bursaries, and maintenance grants.</p>
                 </div>
                 <div class="geo-card nigeria card reveal">
                     <h3>Nigeria</h3>
                     <div class="gold-line" style="background: var(--green);"></div>
-                    <p>JKOF (NIG), registration number 7061941, operates in Nigeria with a focus on supporting students in secondary and tertiary education. We partner with schools to identify academically gifted students who require financial assistance to continue their education and achieve their potential.</p>
+                    <p>JKOF (NIG), registered with the Corporate Affairs Commission (Registration: 7061941), is an affiliate of the parent UK foundation. It operates across Southern Nigeria, partnering with schools to identify academically gifted students who require financial assistance to continue their education.</p>
+                    <a href="nigeria.html" style="display: inline-block; margin-top: 1rem; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--green);">Visit Nigeria Foundation &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
-        <div class="reveal">
-            <span class="section-label">Make a Difference</span>
-            <h2>Support a Student Today</h2>
-            <div class="gold-line-centre"></div>
-            <p>Your generosity can transform a student's life. Every donation, no matter the size, brings us closer to our goal of empowering the next generation through education.</p>
-            <a href="donate.html" class="btn btn-navy">Make a Donation</a>
+    <section style="background: linear-gradient(135deg, #1a4f38 0%, #2a6e4e 40%, #1d5c40 100%); padding: 8rem 4rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+        <div class="reveal" style="position: relative; z-index: 1;">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Make a Difference</h2>
+            <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">Support a Student Today</p>
+            <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Your generosity can transform a student&rsquo;s life. Every donation, no matter the size, brings us closer to our goal of empowering the next generation through education.</p>
+            <a href="donate.html" class="btn btn-gold">Make a Donation</a>
         </div>
     </section>
 
@@ -179,7 +169,7 @@
                     <p><strong>James Kenechukwu Onwubalili Foundation (UK)</strong></p>
                     <p>31 Brook Rise, Chigwell<br>Essex IG7 6AP<br>United Kingdom</p>
                     <p><strong>Phone:</strong> +44 750 636 3431</p>
-                    <p><strong>Email:</strong> info@jkofoundation.org</p>
+                    <p><strong>Email:</strong> info&#64;jkofoundation.org</p>
                     <p><strong>Web:</strong> www.jameskofoundation.org</p>
                     <p class="footer-legal">Registered as a Charitable Incorporated Organisation in England and Wales</p>
                 </div>
