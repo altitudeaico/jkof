@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — JKOF</title>
+    <meta name="description" content="Learn about the James Kenechukwu Onwubalili Foundation's mission, vision, and how we empower students through education.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Premium buttons */
+        .btn { position: relative; overflow: hidden; border-radius: 50px !important; padding: 1.1rem 3rem !important; font-size: 0.75rem !important; letter-spacing: 2.5px !important; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; z-index: 1; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; z-index: -1; }
+        .btn:hover::before { left: 100%; }
+        .btn-gold { background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 50%, #FFBF00 100%) !important; color: var(--navy) !important; font-weight: 700 !important; box-shadow: 0 4px 15px rgba(255, 191, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-gold:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(255, 191, 0, 0.45), inset 0 1px 0 rgba(255,255,255,0.3) !important; }
+        .btn-navy { background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--navy) 100%) !important; color: #fff !important; box-shadow: 0 4px 15px rgba(0, 71, 171, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .btn-navy:hover { transform: translateY(-3px) !important; box-shadow: 0 8px 30px rgba(0, 71, 171, 0.45), inset 0 1px 0 rgba(255,255,255,0.1) !important; }
+        .nav-cta { border-radius: 50px !important; background: linear-gradient(135deg, #FFBF00 0%, #e6ac00 100%) !important; box-shadow: 0 2px 10px rgba(255, 191, 0, 0.25) !important; }
+        .nav-cta:hover { transform: translateY(-2px) !important; box-shadow: 0 4px 20px rgba(255, 191, 0, 0.4) !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav nav-light" id="nav">
+        <div class="nav-inner">
+            <a href="index.html">
+                <img src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/69788457ec6e2b53877c570a.png" alt="JKOF Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="about.html">About &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="biography.html">Biography</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="nigeria.html">Nigeria</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="nav-cta">Donate</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="biography.html">Biography</a>
+        <a href="history.html">History</a>
+        <a href="news.html">News</a>
+        <a href="nigeria.html">Nigeria</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html" class="mobile-cta">Donate</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero" style="position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 60%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1;">
+            <h1 style="font-family: var(--serif); font-size: 3.8rem; font-weight: 200; letter-spacing: -0.5px;">About the Foundation</h1>
+            <div class="gold-line-centre"></div>
+            <p style="font-family: var(--serif); font-size: 1.3rem; font-weight: 300; opacity: 0.85;">Empowering academically gifted students through scholarships, bursaries,<br>and educational support in the United Kingdom.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section style="background: linear-gradient(135deg, #1d5c40 0%, #2a6e4e 50%, #1a4f38 100%); padding: 5rem 4rem; position: relative; overflow: hidden;">
+        <!-- Texture -->
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: -30%; right: -10%; width: 50%; height: 150%; background: radial-gradient(ellipse, rgba(255,191,0,0.06) 0%, transparent 65%); pointer-events: none;"></div>
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; position: relative; z-index: 1;">
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Our Mission</h2>
+                <div style="width: 60px; height: 3px; background: var(--gold); margin: 1rem 0;"></div>
+                <p style="font-family: var(--serif); font-size: 1.4rem; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.95);">To inspire, empower and transform lives through educational opportunities</p>
+                <p style="font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.75); margin-top: 1.5rem;">The Foundation honours the legacy of Dr. James Kenechukwu Onwubalili by providing educational scholarships, bursaries, and grants to academically gifted but financially disadvantaged students in the United Kingdom, enabling them to achieve their full potential and contribute meaningfully to society.</p>
+            </div>
+            <div class="reveal">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Our Vision</h2>
+                <div style="width: 60px; height: 3px; background: var(--gold); margin: 1rem 0;"></div>
+                <p style="font-family: var(--serif); font-size: 1.4rem; font-weight: 300; font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.95);">A world where talent flourishes regardless of circumstance</p>
+                <p style="font-size: 1rem; line-height: 1.8; color: rgba(255,255,255,0.75); margin-top: 1.5rem;">We envision a world where every academically talented student, regardless of their financial background, has the opportunity to access quality education and fulfil their potential. Communities transformed by the ripple effects of empowered, educated individuals who go on to make significant contributions to their fields and societies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Help -->
+    <section style="background: #fff; padding: 7rem 4rem;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">How We Help</h2>
+                <p style="font-family: var(--serif); font-size: 3.2rem; font-weight: 200; line-height: 1.12; color: var(--navy); letter-spacing: -0.5px;">Supporting Students at Every Stage</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem;">
+                <div class="reveal" style="text-align: center; padding: 1.5rem 0;">
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); margin-bottom: 1rem; line-height: 1;">01</div>
+                    <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem;">Scholarships</h3>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 1rem; line-height: 1.7; color: var(--text-light);">Full and partial scholarships covering tuition fees for outstanding students at secondary and tertiary institutions.</p>
+                </div>
+                <div class="reveal" style="text-align: center; padding: 1.5rem 0;">
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); margin-bottom: 1rem; line-height: 1;">02</div>
+                    <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem;">Bursaries</h3>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 1rem; line-height: 1.7; color: var(--text-light);">Financial awards to help students meet the costs of books, equipment, and essential educational resources.</p>
+                </div>
+                <div class="reveal" style="text-align: center; padding: 1.5rem 0;">
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); margin-bottom: 1rem; line-height: 1;">03</div>
+                    <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem;">Educational Grants</h3>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 1rem; line-height: 1.7; color: var(--text-light);">Targeted grants for examination fees, specialist training, and professional development opportunities.</p>
+                </div>
+                <div class="reveal" style="text-align: center; padding: 1.5rem 0;">
+                    <div style="font-family: var(--serif); font-size: 3.5rem; font-weight: 200; color: var(--gold); margin-bottom: 1rem; line-height: 1;">04</div>
+                    <h3 style="font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem;">Maintenance Support</h3>
+                    <div style="width: 30px; height: 2px; background: var(--gold); margin: 0 auto 1rem;"></div>
+                    <p style="font-size: 1rem; line-height: 1.7; color: var(--text-light);">Living allowances ensuring students can focus on their studies without the burden of financial hardship.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographic Focus -->
+    <section style="background: var(--cream); padding: 7rem 4rem;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Where We Operate</h2>
+                <p style="font-family: var(--serif); font-size: 3.2rem; font-weight: 200; line-height: 1.12; color: var(--navy); letter-spacing: -0.5px;">One Mission, Two Countries</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div class="reveal" style="padding: 3rem; border-left: 4px solid var(--navy);">
+                    <h3 style="font-family: var(--serif); font-size: 1.8rem; font-weight: 200; color: var(--navy); margin-bottom: 0.3rem;">United Kingdom</h3>
+                    <p style="font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Parent Foundation</p>
+                    <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light);">JKOF (UK) is registered as a Charitable Incorporated Organisation in England and Wales (2026). As the parent foundation, we work with partner schools and institutions across the UK to identify and support exceptional students from disadvantaged backgrounds, providing scholarships, bursaries, and maintenance grants.</p>
+                </div>
+                <div class="reveal" style="padding: 3rem; border-left: 4px solid #2a6e4e;">
+                    <h3 style="font-family: var(--serif); font-size: 1.8rem; font-weight: 200; color: #2a6e4e; margin-bottom: 0.3rem;">Nigeria</h3>
+                    <p style="font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Affiliate Foundation</p>
+                    <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light);">JKOF (NIG), registered with the Corporate Affairs Commission (Registration: 7061941), is an affiliate of the parent UK foundation. It operates across Southern Nigeria, partnering with schools to identify academically gifted students who require financial assistance to continue their education.</p>
+                    <a href="nigeria.html" style="display: inline-block; margin-top: 1.5rem; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #2a6e4e; transition: all 0.3s ease;">Visit Nigeria Foundation &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UK Active Partnerships -->
+    <section style="background: #fff; padding: 6rem 4rem;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">UK Active Partnerships</h2>
+                <p style="font-family: var(--serif); font-size: 3.2rem; font-weight: 200; line-height: 1.12; color: var(--navy); letter-spacing: -0.5px;">Working With Schools and Institutions</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div class="reveal" style="padding: 2.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 4px solid var(--navy); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem;">Schools in Tower Hamlets</h3>
+                    <div style="width: 40px; height: 2px; background: var(--gold); margin-bottom: 1rem;"></div>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;">East London</p>
+                    <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light);">Supporting students in the wards of St Dunstans, Mile End, Stepney Green, Shadwell, and Spitalfields & Banglatown.</p>
+                </div>
+                <div class="reveal" style="padding: 2.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 4px solid var(--navy); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 0.8rem;">North Middlesex University Hospital</h3>
+                    <div style="width: 40px; height: 2px; background: var(--gold); margin-bottom: 1rem;"></div>
+                    <p style="font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;">College of Medicine</p>
+                    <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light);">Partnership with the College of Medicine in the Borough of Enfield and Haringey, London.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: linear-gradient(135deg, #1a4f38 0%, #2a6e4e 40%, #1d5c40 100%); padding: 8rem 4rem; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 4px);"></div>
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 120%; background: radial-gradient(ellipse, rgba(255,191,0,0.08) 0%, transparent 60%); pointer-events: none;"></div>
+        <div class="reveal" style="position: relative; z-index: 1;">
+            <h2 style="font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem;">Make a Difference</h2>
+            <p style="font-family: var(--serif); font-size: 2.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; color: rgba(255,255,255,0.95);">Support a Student Today</p>
+            <div style="width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem;"></div>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Your generosity can transform a student&rsquo;s life. Every donation, no matter the size, brings us closer to our goal of empowering the next generation through education.</p>
+            <a href="donate.html" class="btn btn-gold">Make a Donation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="https://assets.cdn.filesafe.space/efbrHmHYWZ6RVRTnWxVu/media/69788457ec6e2b53877c570a.png" alt="JKOF" class="footer-logo">
+            <div class="footer-offices">
+                <div class="footer-office">
+                    <h4>United Kingdom</h4>
+                    <p><strong>James Kenechukwu Onwubalili Foundation (UK)</strong></p>
+                    <p>The Parish Office<br>c/o All Saints' House<br>Romford Road, Chigwell Row<br>IG7 4QD<br>United Kingdom</p>
+                    <p><strong>Phone:</strong> +44 750 636 3431</p>
+                    <p><strong>Email:</strong> info&#64;jkofoundation.org</p>
+                    <p><strong>Web:</strong> www.jameskofoundation.org</p>
+                    <p class="footer-legal">Registered as a Charitable Incorporated Organisation in England and Wales</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 James Kenechukwu Onwubalili Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
