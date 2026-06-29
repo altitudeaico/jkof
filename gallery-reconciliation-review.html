@@ -92,6 +92,7 @@
         table td {
             padding: 1rem;
             border-bottom: 1px solid #eee;
+            vertical-align: top;
         }
         
         table tr:hover {
@@ -105,6 +106,20 @@
             text-align: center;
         }
         
+        .image-preview {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .image-preview:hover {
+            transform: scale(1.05);
+        }
+        
         .filename {
             font-family: 'Courier New', monospace;
             font-size: 0.9rem;
@@ -115,6 +130,48 @@
         .caption {
             color: #333;
             font-weight: 500;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            padding-top: 40px;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 8px;
+            max-width: 90%;
+            max-height: 80vh;
+            overflow: auto;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .modal-close {
+            color: white;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .modal-close:hover {
+            color: #ccc;
         }
         
         .hamlet-note {
@@ -261,138 +318,165 @@
                 <thead>
                     <tr>
                         <th style="width: 50px;">Item</th>
-                        <th style="width: 45%;">Image Filename</th>
-                        <th style="width: 55%;">Caption for Website</th>
+                        <th style="width: 140px;">Preview</th>
+                        <th style="width: 40%;">Image Filename</th>
+                        <th style="width: 60%;">Caption for Website</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="row-number">1</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.18.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 1"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.18.jpeg</td>
                         <td class="caption">Freshman – University of Ibadan, 1970</td>
                     </tr>
                     <tr>
                         <td class="row-number">2</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.19.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 2"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.19.jpeg</td>
                         <td class="caption">JK poses with his mother as he graduates – MBBS Ibadan – 1975</td>
                     </tr>
                     <tr>
                         <td class="row-number">3</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.24 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 3"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.24 (1).jpeg</td>
                         <td class="caption">JK engages Vivian – 1979</td>
                     </tr>
                     <tr>
                         <td class="row-number">4</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.21 (2).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 4"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.21 (2).jpeg</td>
                         <td class="caption">JK and family at James Junior's graduation – MBBS – 2005</td>
                     </tr>
                     <tr>
                         <td class="row-number">5</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.22 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 5"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.22 (1).jpeg</td>
                         <td class="caption">JK and Vivian at James Junior's wedding – London, Aug 2016</td>
                     </tr>
                     <tr>
                         <td class="row-number">6</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.23 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 6"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.23 (1).jpeg</td>
                         <td class="caption">JK and friends in London – Dr Gilbert Igboaka, Dr Kaine Ikwueke, Dr Emeka Ojuwku and Dr Emeka Uzoho</td>
                     </tr>
                     <tr>
                         <td class="row-number">7</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.21 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 7"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.21 (1).jpeg</td>
                         <td class="caption">JK with his first son James Junior – Chigwell 2008</td>
                     </tr>
                     <tr>
                         <td class="row-number">8</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.20.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 8"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.20.jpeg</td>
                         <td class="caption">Government College Umuahia Old Boys' inaugural dinner – London, 2008</td>
                     </tr>
                     <tr>
                         <td class="row-number">9</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.22 (2).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 9"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.22 (2).jpeg</td>
                         <td class="caption">A pose with Laura and James Junior on their wedding day – Aug 2016</td>
                     </tr>
                     <tr>
                         <td class="row-number">10</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.23 (2).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 10"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.23 (2).jpeg</td>
                         <td class="caption">A proud family at Chioma's graduation – MBBS, 2011</td>
                     </tr>
                     <tr>
                         <td class="row-number">11</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.22.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 11"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.22.jpeg</td>
                         <td class="caption">Proud parents at their daughter's wedding – July 2015</td>
                     </tr>
                     <tr>
                         <td class="row-number">12</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.24.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 12"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.24.jpeg</td>
                         <td class="caption">A father's pride as he walks Chioma down the aisle – July 2015</td>
                     </tr>
                     <tr>
                         <td class="row-number">13</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.25.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 13"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.25.jpeg</td>
                         <td class="caption">JK with his young children at Enugu, Nigeria – 1986</td>
                     </tr>
                     <tr>
                         <td class="row-number">14</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.25 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 14"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.25 (1).jpeg</td>
                         <td class="caption">A proud father at his daughter's wedding, enjoying a special dance – 2015</td>
                     </tr>
                     <tr>
                         <td class="row-number">15</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.26.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 15"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.26.jpeg</td>
                         <td class="caption">JK the young man with his dear mother, sisters, nieces and nephews – Nigeria, 1975</td>
                     </tr>
                     <tr>
                         <td class="row-number">16</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.26 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 16"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.26 (1).jpeg</td>
                         <td class="caption">Daughter and father during a family holiday – Mallorca 2002</td>
                     </tr>
                     <tr>
                         <td class="row-number">17a</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.17.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 17a"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17.jpeg</td>
                         <td class="caption">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959<div class="hamlet-note">Displayed together with image 17b</div></td>
                     </tr>
                     <tr>
                         <td class="row-number">17b</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.17 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 17b"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17 (1).jpeg</td>
                         <td class="caption">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959<div class="hamlet-note">Displayed together with image 17a</div></td>
                     </tr>
                     <tr>
                         <td class="row-number">18</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.21.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 18"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.21.jpeg</td>
                         <td class="caption">JK and family at David's graduation – MBBS – 2008</td>
                     </tr>
                     <tr>
                         <td class="row-number">19</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.17 (2).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 19"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17 (2).jpeg</td>
                         <td class="caption">JK's parents – Reverend James Onwubalili and Madame Adeline Onwubalili (of blessed memory)</td>
                     </tr>
                     <tr>
                         <td class="row-number">20</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.17 (3).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 20"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17 (3).jpeg</td>
                         <td class="caption">Government College Umuahia Table Tennis Team – 1966</td>
                     </tr>
                     <tr>
                         <td class="row-number">21</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.18 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 21"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.18 (1).jpeg</td>
                         <td class="caption">JK (extreme left) with his mother (centre) and sisters</td>
                     </tr>
                     <tr>
                         <td class="row-number">22</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.19 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 22"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.19 (1).jpeg</td>
                         <td class="caption">JK in deep conversation – 1998</td>
                     </tr>
                     <tr>
                         <td class="row-number">23</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.20 (1).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 23"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.20 (1).jpeg</td>
                         <td class="caption">Unwinding on a family holiday – Spain, 2003</td>
                     </tr>
                     <tr>
                         <td class="row-number">24</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.20 (2).jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 24"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.20 (2).jpeg</td>
                         <td class="caption">JK with his sisters at his niece's wedding – Nigeria 2015</td>
                     </tr>
                     <tr>
                         <td class="row-number">25</td>
+                        <td><img src="gallery-preview/WhatsApp Image 2026-06-07 at 16.29.23.jpeg" class="image-preview" onclick="openModal(this.src)" alt="Image 25"></td>
                         <td class="filename">WhatsApp Image 2026-06-07 at 16.29.23.jpeg</td>
                         <td class="caption">A toast to good health and happiness on a family holiday – 2013</td>
                     </tr>
@@ -464,6 +548,33 @@
         function handleChanges() {
             alert('Please review the mapping above and let us know which items need adjustment. You can screenshot specific rows or describe the changes needed.');
         }
+        
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = src;
+            modal.style.display = 'block';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
     </script>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="Preview">
+        </div>
+    </div>
 </body>
 </html>
