@@ -1,0 +1,147 @@
+{
+  "project": "JKOF Website - Biography Gallery",
+  "version": "1.0 - Verified Manifest",
+  "date": "2026-06-29",
+  "description": "Authoritative mapping of 26 ZIP image files to 25 biography gallery entries",
+  "notes": {
+    "total_files": 26,
+    "gallery_entries": 25,
+    "grouping": "Hamlet images (16.29.26 (1) and 16.29.26 (2)) displayed together as one entry",
+    "source": "Contact sheet visual verification by Bolaji Olatoye"
+  },
+  "gallery": [
+    {
+      "order": 1,
+      "filename": "16.29.18.jpeg",
+      "caption": "Freshman – University of Ibadan, 1970"
+    },
+    {
+      "order": 2,
+      "filename": "16.29.20.jpeg",
+      "caption": "JK poses with his mother as he graduates – MBBS Ibadan – 1975"
+    },
+    {
+      "order": 3,
+      "filename": "16.29.21 (1).jpeg",
+      "caption": "JK engages Vivian – 1979"
+    },
+    {
+      "order": 4,
+      "filename": "16.29.21 (2).jpeg",
+      "caption": "JK and family at James Junior's graduation – MBBS – 2005"
+    },
+    {
+      "order": 5,
+      "filename": "16.29.21 (3).jpeg",
+      "caption": "JK and Vivian at James Junior's wedding – London, Aug 2016"
+    },
+    {
+      "order": 6,
+      "filename": "16.29.21.jpeg",
+      "caption": "JK and friends in London – Dr Gilbert Igboaka, Dr Kaine Ikwueke, Dr Emeka Ojuwku and Dr Emeka Uzoho"
+    },
+    {
+      "order": 7,
+      "filename": "16.29.22 (2).jpeg",
+      "caption": "JK with his first son James Junior – Chigwell 2008"
+    },
+    {
+      "order": 8,
+      "filename": "16.29.23 (2).jpeg",
+      "caption": "Government College Umuahia Old Boys' inaugural dinner – London, 2008"
+    },
+    {
+      "order": 9,
+      "filename": "16.29.23 (1).jpeg",
+      "caption": "A pose with Laura and James Junior on their wedding day – Aug 2016"
+    },
+    {
+      "order": 10,
+      "filename": "16.29.22.jpeg",
+      "caption": "A proud family at Chioma's graduation – MBBS, 2011"
+    },
+    {
+      "order": 11,
+      "filename": "16.29.23.jpeg",
+      "caption": "Proud parents at their daughter's wedding – July 2015"
+    },
+    {
+      "order": 12,
+      "filename": "16.29.24 (1).jpeg",
+      "caption": "A father's pride as he walks Chioma down the aisle – July 2015"
+    },
+    {
+      "order": 13,
+      "filename": "16.29.24 (2).jpeg",
+      "caption": "JK with his young children at Enugu, Nigeria – 1986"
+    },
+    {
+      "order": 14,
+      "filename": "16.29.24 (3).jpeg",
+      "caption": "A proud father at his daughter's wedding, enjoying a special dance – 2015"
+    },
+    {
+      "order": 15,
+      "filename": "16.29.25 (1).jpeg",
+      "caption": "JK the young man with his dear mother, sisters, nieces and nephews – Nigeria, 1975"
+    },
+    {
+      "order": 16,
+      "filename": "16.29.25 (2).jpeg",
+      "caption": "Daughter and father during a family holiday – Mallorca 2002"
+    },
+    {
+      "order": "17a",
+      "filename": "16.29.26 (1).jpeg",
+      "caption": "JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959",
+      "grouped_with": "17b"
+    },
+    {
+      "order": "17b",
+      "filename": "16.29.26 (2).jpeg",
+      "caption": "JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959",
+      "grouped_with": "17a",
+      "note": "Display together with 17a as single gallery entry"
+    },
+    {
+      "order": 18,
+      "filename": "16.29.12.jpeg",
+      "caption": "JK and family at David's graduation – MBBS – 2008"
+    },
+    {
+      "order": 19,
+      "filename": "16.29.13 (1).jpeg",
+      "caption": "JK's parents – Reverend James Onwubalili and Madame Adeline Onwubalili (of blessed memory)"
+    },
+    {
+      "order": 20,
+      "filename": "16.29.13 (2).jpeg",
+      "caption": "Government College Umuahia Table Tennis Team – 1966"
+    },
+    {
+      "order": 21,
+      "filename": "16.29.13.jpeg",
+      "caption": "JK (extreme left) with his mother (centre) and sisters"
+    },
+    {
+      "order": 22,
+      "filename": "16.29.25.jpeg",
+      "caption": "JK in deep conversation – 1998"
+    },
+    {
+      "order": 23,
+      "filename": "17.50.48 sitting.jpeg",
+      "caption": "Unwinding on a family holiday – Spain, 2003"
+    },
+    {
+      "order": 24,
+      "filename": "17.50.49 sisters.jpeg",
+      "caption": "JK with his sisters at his niece's wedding – Nigeria, 2015"
+    },
+    {
+      "order": 25,
+      "filename": "17.50.49 holiday toast.jpeg",
+      "caption": "A toast to good health and happiness on a family holiday – 2013"
+    }
+  ]
+}
