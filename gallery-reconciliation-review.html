@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Reconciliation Review — JKOF Website</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0047AB 0%, #50C878 100%);
+            color: white;
+            padding: 3rem 2rem;
+            margin: -2rem -2rem 3rem -2rem;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        .section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #0047AB;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #FFBF00;
+            padding-bottom: 0.5rem;
+        }
+        
+        .process-explanation {
+            background: #f0f7ff;
+            border-left: 4px solid #0047AB;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+        
+        .process-explanation p {
+            margin-bottom: 0.8rem;
+        }
+        
+        .process-explanation strong {
+            color: #0047AB;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        table thead {
+            background: #f5f5f5;
+            border-bottom: 2px solid #0047AB;
+        }
+        
+        table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #0047AB;
+        }
+        
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .row-number {
+            color: #999;
+            font-weight: 600;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .filename {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #555;
+            word-break: break-all;
+        }
+        
+        .caption {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .hamlet-note {
+            background: #fff9e6;
+            border: 1px solid #FFBF00;
+            padding: 0.8rem;
+            border-radius: 4px;
+            margin-top: 0.3rem;
+        }
+        
+        .hamlet-note::before {
+            content: "📌 ";
+        }
+        
+        .hamlet-note {
+            font-size: 0.9rem;
+            color: #996600;
+        }
+        
+        .approval-section {
+            background: #f0fff0;
+            border: 2px solid #50C878;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .approval-section h3 {
+            color: #50C878;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .approval-checklist {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .approval-checklist li {
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            background: white;
+            border-left: 4px solid #50C878;
+            border-radius: 4px;
+        }
+        
+        .approval-checklist input {
+            margin-right: 0.8rem;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .approval-checklist label {
+            cursor: pointer;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-approve {
+            background: #50C878;
+            color: white;
+        }
+        
+        .btn-approve:hover {
+            background: #40a860;
+            box-shadow: 0 4px 12px rgba(80, 200, 120, 0.3);
+        }
+        
+        .btn-request-changes {
+            background: #f5f5f5;
+            color: #0047AB;
+            border: 2px solid #0047AB;
+        }
+        
+        .btn-request-changes:hover {
+            background: #f0f7ff;
+        }
+        
+        .footer-note {
+            background: #fff9e6;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            border-left: 4px solid #FFBF00;
+        }
+        
+        .footer-note p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Biography Gallery — Image Reconciliation Review</h1>
+            <p>JKOF Website Update | June 29, 2026</p>
+        </div>
+
+        <!-- Process Explanation -->
+        <div class="section">
+            <h2>Reconciliation Process</h2>
+            <div class="process-explanation">
+                <p><strong>Challenge:</strong> The annotations document provided contained 26 images with their captions, but without filenames. The original image files in Google Drive had filenames but no captions attached.</p>
+                
+                <p><strong>Our approach:</strong> We manually reviewed each image file against the annotations to create an authoritative mapping of filenames to captions. This ensures accuracy before updating the website.</p>
+                
+                <p><strong>Result:</strong> We have created a reconciliation table below showing exactly which image file corresponds to which caption, in the intended gallery display order.</p>
+                
+                <p><strong>Gallery structure:</strong> The mapping identifies <strong>25 gallery display items</strong> (not 26). The two Hamlet photographs are grouped together as a single gallery entry with one shared caption.</p>
+            </div>
+        </div>
+
+        <!-- Mapping Table -->
+        <div class="section">
+            <h2>Image-to-Caption Mapping</h2>
+            <p style="margin-bottom: 1.5rem; color: #666;">Below is the complete mapping in intended gallery display order:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Item</th>
+                        <th style="width: 45%;">Image Filename</th>
+                        <th style="width: 55%;">Caption for Website</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="row-number">1</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.18.jpeg</td>
+                        <td class="caption">Freshman – University of Ibadan, 1970</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">2</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.19.jpeg</td>
+                        <td class="caption">JK poses with his mother as he graduates – MBBS Ibadan – 1975</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">3</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.24 (1).jpeg</td>
+                        <td class="caption">JK engages Vivian – 1979</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">4</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.21 (2).jpeg</td>
+                        <td class="caption">JK and family at James Junior's graduation – MBBS – 2005</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">5</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.22 (1).jpeg</td>
+                        <td class="caption">JK and Vivian at James Junior's wedding – London, Aug 2016</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">6</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.23 (1).jpeg</td>
+                        <td class="caption">JK and friends in London – Dr Gilbert Igboaka, Dr Kaine Ikwueke, Dr Emeka Ojuwku and Dr Emeka Uzoho</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">7</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.21 (1).jpeg</td>
+                        <td class="caption">JK with his first son James Junior – Chigwell 2008</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">8</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.20.jpeg</td>
+                        <td class="caption">Government College Umuahia Old Boys' inaugural dinner – London, 2008</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">9</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.22 (2).jpeg</td>
+                        <td class="caption">A pose with Laura and James Junior on their wedding day – Aug 2016</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">10</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.23 (2).jpeg</td>
+                        <td class="caption">A proud family at Chioma's graduation – MBBS, 2011</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">11</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.22.jpeg</td>
+                        <td class="caption">Proud parents at their daughter's wedding – July 2015</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">12</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.24.jpeg</td>
+                        <td class="caption">A father's pride as he walks Chioma down the aisle – July 2015</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">13</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.25.jpeg</td>
+                        <td class="caption">JK with his young children at Enugu, Nigeria – 1986</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">14</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.25 (1).jpeg</td>
+                        <td class="caption">A proud father at his daughter's wedding, enjoying a special dance – 2015</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">15</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.26.jpeg</td>
+                        <td class="caption">JK the young man with his dear mother, sisters, nieces and nephews – Nigeria, 1975</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">16</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.26 (1).jpeg</td>
+                        <td class="caption">Daughter and father during a family holiday – Mallorca 2002</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">17a</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17.jpeg</td>
+                        <td class="caption">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959<div class="hamlet-note">Displayed together with image 17b</div></td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">17b</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17 (1).jpeg</td>
+                        <td class="caption">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959<div class="hamlet-note">Displayed together with image 17a</div></td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">18</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.21.jpeg</td>
+                        <td class="caption">JK and family at David's graduation – MBBS – 2008</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">19</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17 (2).jpeg</td>
+                        <td class="caption">JK's parents – Reverend James Onwubalili and Madame Adeline Onwubalili (of blessed memory)</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">20</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.17 (3).jpeg</td>
+                        <td class="caption">Government College Umuahia Table Tennis Team – 1966</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">21</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.18 (1).jpeg</td>
+                        <td class="caption">JK (extreme left) with his mother (centre) and sisters</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">22</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.19 (1).jpeg</td>
+                        <td class="caption">JK in deep conversation – 1998</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">23</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.20 (1).jpeg</td>
+                        <td class="caption">Unwinding on a family holiday – Spain, 2003</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">24</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.20 (2).jpeg</td>
+                        <td class="caption">JK with his sisters at his niece's wedding – Nigeria 2015</td>
+                    </tr>
+                    <tr>
+                        <td class="row-number">25</td>
+                        <td class="filename">WhatsApp Image 2026-06-07 at 16.29.23.jpeg</td>
+                        <td class="caption">A toast to good health and happiness on a family holiday – 2013</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Approval Section -->
+        <div class="section">
+            <div class="approval-section">
+                <h3>✓ Please Review and Confirm</h3>
+                
+                <p style="margin-bottom: 1.5rem;">Before we update the website, please review the mapping above and confirm:</p>
+                
+                <ul class="approval-checklist">
+                    <li>
+                        <input type="checkbox" id="check1">
+                        <label for="check1">Each image filename matches the correct photograph</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check2">
+                        <label for="check2">Each caption accurately describes its image</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check3">
+                        <label for="check3">The gallery display order (1–25) is as intended</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check4">
+                        <label for="check4">The two Hamlet images (17a & 17b) are grouped correctly</label>
+                    </li>
+                </ul>
+
+                <div class="action-buttons">
+                    <button class="btn btn-approve" onclick="handleApproval()">✓ Mapping Approved – Ready to Update Website</button>
+                    <button class="btn btn-request-changes" onclick="handleChanges()">→ Changes Needed – Please Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="footer-note">
+            <p><strong>What happens next:</strong></p>
+            <p>Once you confirm this mapping is correct, we will:</p>
+            <p>1. Upload all 26 image files to the website with correct filenames</p>
+            <p>2. Update the Biography gallery page with this exact caption mapping</p>
+            <p>3. Verify the gallery displays correctly on desktop and mobile</p>
+            <p>4. Provide you with a final review link before going live</p>
+            
+            <div class="contact-info">
+                <p>If you need any clarification on this reconciliation, or if you notice any errors in the mapping, please let us know immediately.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleApproval() {
+            const checks = document.querySelectorAll('.approval-checklist input');
+            const allChecked = Array.from(checks).every(cb => cb.checked);
+            
+            if (allChecked) {
+                alert('Thank you for confirming! We will now proceed to update the website with this mapping.');
+                // In a real implementation, this would submit to your workflow
+            } else {
+                alert('Please check all items to confirm the mapping is correct.');
+            }
+        }
+        
+        function handleChanges() {
+            alert('Please review the mapping above and let us know which items need adjustment. You can screenshot specific rows or describe the changes needed.');
+        }
+    </script>
+</body>
+</html>
