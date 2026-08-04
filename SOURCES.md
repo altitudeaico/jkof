@@ -23,6 +23,22 @@ honest form is: "not found in [list]; [list] not yet examined."
 Run `python3 tools/coverage_check.py <dir>` against any recovered source
 directory to see what it holds that the site does not.
 
+## Standing client instruction — David, WhatsApp, 23 June 2026
+
+> "Please use only the pics from the *jkof website pics* file for the website
+> and not the ones in the annotations file some of which haven't been snipped
+> and tidied up."
+
+The gallery therefore draws on source 1 only. Source 2 (Aunty Vivian's January
+uploads) are phone photographs of pages from the commemorative programme: they
+carry page borders, a printed "Page 07", mirrored watermark bleed-through and
+burned-in captions. They are the **right photographs** — she named four of them
+specifically — but they are not tidied, so they fail David's standard. They are
+held in `bio/images/_unverified/` pending clean originals.
+
+Unresolved between trustees: David says use only the 26; Aunty Vivian asks for
+four photographs that are not among the 26. Not a build decision.
+
 ## Sources
 
 | # | Location | Origin | Date supplied | Status |
@@ -41,8 +57,12 @@ directory to see what it holds that the site does not.
 - Photograph 1, "young JK in a white long sleeve shirt" — **not found** in
   sources 1, 2, 6, 7. Sources 3, 5 and 8 not yet examined. Do not tell the
   client it does not exist.
-- Table tennis team year: the family's own caption on IMG_8598 reads
-  **1962**. The site said 1966. Corrected 4 Aug 2026.
+- Table tennis team year: **the two family sources disagree.** The annotations
+  document (the file David nominated for website captions) says **1966** and
+  names the team. The burned-in caption on the programme scan IMG_8598 says
+  **1962**. The site follows the annotations document. Do not change this
+  without asking the family. On 4 Aug 2026 we briefly changed it to 1962 on the
+  strength of the scan alone; that was wrong.
 - Vivian's maiden name: biography gives both Eruchalu and Onyemelukwe.
   Unresolved — client question.
 - Wedding year: her note says 1980; biography text says 1981. Unresolved.
