@@ -1,0 +1,111 @@
+Biography: Dr James Kenechukwu Onwubalili MD FRCP
+
+We are grateful to God for the exceptional life of our beloved James Kenechukwu Onwubalili, affectionately known as "Daddy" to us. Despite humble beginnings, he achieved remarkable excellence and international recognition through hard work, dedication, determination and unwavering faith in God. Even with his numerous successes, he remained a very humble man. He touched many lives both professionally and personally through his selflessness, kindness, compassion, generosity and humanity. Above all, Daddy was an exceptional father and a loving husband. He was also a caring brother, supportive uncle and loyal friend.
+
+Born on 24th April 1947, Daddy was the son of Reverend James and Madam Adeline (Mama) Onwubalili, both of whom are now blessed in heaven. They resided in Ihiagwa, Atta of Owerri, Imo State, Nigeria. His father was an itinerant pastor who travelled across different villages in Imo State, helping to develop the churches in those communities. Tragically, when Daddy was just three years old, his father passed away, leaving Mama to raise the family as a single mother in the male-dominated society of 1950s Nigeria. Despite these challenges, their home remained a loving, caring and closely-knit one. The children shared household chores to keep things running smoothly. Daddy often reminisced about how he and his sisters would trek five miles each morning to fetch water from the nearest stream. Mama's emphasis on peace and unity fostered strong sibling relationships among the children. They enjoyed singing Anglican hymns regularly at the local church choir and performed them publicly for the community during Christmas and other festivals.
+
+Daddy's schooling began at Ebenezer Primary School in Ogidi where he demonstrated remarkable academic promise from a young age. His headmaster Mr Onuegbu encouraged him to take the entrance exam to the prestigious Government College Umuahia. Despite the family's financial struggles, Mama was determined to secure the best education for her children. When Daddy's half-brother Mr Emmanuel Onwubalili (of blessed memory), then a civil servant with modest income, offered to cover the school fees, Mama seized the opportunity. This support allowed Daddy to pass the Government College Umuahia entrance exam with flying colours. His brother-in-law Chief DDN Okafor (of blessed memory) was also incredibly generous during his early years. He gave him £10 pocket money after each school holiday which Daddy would spend about £6-£8 and then give the rest to Mama to help support their limited family income.
+
+As he matured into adolescence and settled into Government College Umuahia, he developed his signature smile and light complexion. He wore his trademark spectacles and sported a well-groomed afro. He also grew rapidly into his imposing 6 foot 4, broad-shouldered frame. However, he always remained affable and approachable, with a gentle manner and an inviting yet firm handshake.
+
+Government College Umuahia offered Daddy a wealth of exciting academic and extracurricular opportunities. He fondly recalled how this enriching schooling experience shaped him into the person he was. He represented the school in cricket and table tennis and captained Niger House. Under his leadership, Niger House triumphed in the overall School House Competition, securing the prestigious 'Victor Ludorum' award for all-round excellence in sports and academics. They also won the 'Garden Shield' three years in a row for gardening and the 'House Cricket Competition'.
+
+Beyond his house captaincy, Daddy served as Deputy School Captain, gaining valuable team leadership experience. He also thoroughly enjoyed being a member of the Drama club, starring in numerous Shakespearian plays, including Hamlet in 1964, where he portrayed the Prince of Denmark. Growing up, he often recited his favourite monologues from Hamlet around the house, such as:
+
+*"...to expostulate why day is day night is night and time is time is nothing but to waste day night and time".*
+
+*"To be or not to be that is the question. Whether it is nobler in the mind to suffer the slings and arrows of outrageous fortune or to take arms against a sea of troubles and by opposing end them".  *
+
+During this season, lifelong friends were formed, many of whom also attended Government College Umuahia. At home, we grew accustomed to the affectionate nicknames Daddy used for them, so it took us decades to discover their real names. Some of these include "Chaik-o-chaik" (Dr Chike Onyekwuluje), "Igboms" (Dr Gilbert Igboaka), "Okezaik" (Dr Okezike Okereke), "TOKS a-um" (late Dr T.O.K Osuafor), "Nwabs" (Dr Nwachukwu Nwabineli), "Aja-nnem" (Late Dr Jazman Okparocha) and "JK1" or "number 1" (Dr Jerome Kaine Ikwueke).
+
+However, Daddy's education was interrupted for five years by the Biafran Civil War. When the war reached Ogidi in 1967, the family fled, preventing him from accepting his offer at the prestigious Ibadan Medical School despite having completed his A-Levels. Consequently, he joined the Biafran army, rising to the rank of Captain. Fortunately, he returned home safely after the war in the early 1970s. He then briefly taught at Owo Girls' Grammar School before eventually embarking on his much-anticipated undergraduate training at the University of Ibadan Medical School.  
+
+Daddy's academic prowess peaked at the University of Ibadan during both his clinical and pre-clinical years. He lived in Alexander Brown Hall, one of the Halls of Residence, and often recounted a story his lecturer told the freshmen. The lecturer posed a dilemma: "N2000 can buy 'Neurology' by Ginsberg or five bottles of beer. The choice is yours."
+
+Daddy spoke fondly and with utmost respect for his teachers at UCH Ibadan. These world-renowned doctors in various medical and surgical specialities included Emeritus Professor Akinkugbe (Physician and Cardiologist), Emeritus Professor Oluwole Akande (Obstetrics & Gynaecology), the late Professor Benjamin Osuntokun (Neurologist), the late Professor Latunde Odeku (Neurosurgeon), Professor Luzzato (Haematologist) and Professors Nylander and Hendrickse. We were truly humbled to read some of the influential men in my father's life's words about him:
+
+*"Without doubt, he will be remembered as one of the brightest students to have entered UI/UCH Ibadan." (Prof Akinkugbe)*
+
+*"He was easily the best in his class, earning numerous distinctions, prizes and awards. He combined academic brilliance with humility, kindness and a genuine sense of commitment." (Prof Akande)*
+
+The distinctions, prizes and awards mentioned by Prof Akande include:
+
+• The Sir Samuel Manuwa GOLD MEDAL 1975 -- awarded for the best graduate in the Faculty of Medicine at the University of Ibadan.
+
+• The Lady Matilda Manuwa Medal 1975 -- given for the best graduate in Obstetrics and Gynaecology and Child Health at the University of Ibadan.
+
+• The Sir Kofo Abayomi Prize 1975 -- presented to the best student in Medicine and Pathology at the University of Ibadan.
+
+• The NUPEMECO Prize 1975 -- awarded to the best all-round graduate of the University of Ibadan.
+
+• The May & Baker Prize 1972 (Diagnostic set) -- presented to the best student in the second MB exam at Ibadan.
+
+• The Faculty of Medicine Prize, Ibadan 1975
+
+• The Dr Edward B French's Prize (Ophthalmoscope) was awarded in 1972.
+
+• During his final MBBS exams in 1975, he achieved distinctions in Physiology, Pharmacology, Pathology, Obstetrics and Gynaecology, and Internal Medicine.
+
+• In his 1975 graduating year at Ibadan, he also won departmental prizes in Physiology, Obstetrics and Gynaecology, and Medicine.  
+
+He was also awarded the prestigious Double Meritorious award as **Scholar of the University of Ibadan and Federal Government of Nigeria** between 1970 and 1975.
+
+Daddy graduated from the University of Ibadan Medical School in 1975 with Distinction.
+
+Between July 1975 and January 1978, he worked at the University of Nigeria Teaching Hospital. Initially, he served as a Pre-registration House Officer and later as a Senior House Officer in General Internal Medicine. Subsequently, he relocated to the UK to pursue further postgraduate training. He began his training at Hammersmith Hospital as a Senior House Officer in General and Renal Medicine from February to July 1978. Then, he moved to Northwick Park Hospital, Harrow, where he worked as a Senior House Officer in Medicine and Infectious Diseases from September 1978 to August 1979. During this time, he successfully passed his MRCP (UK) examination. Shortly after, he was appointed as a Registrar in Nephrology and Transplantation at St Peter's, St Paul's and St Philip's Hospitals (the 3Ps) Institute of Urology & Nephrology at the University of London from October 1979 to September 1981.
+
+In November 1981, Daddy was appointed as an MRC Research Fellow and Honorary Registrar at the MRC Clinical Research Centre and Northwick Park Hospital in Harrow, UK. He was awarded an MD in 1985 for his research and thesis on "A Spectrum of Immunity in Tuberculosis."
+
+While working as a registrar at the 3Ps, he married Miss Vivian Chineze Eruchalu on 12 July 1980 at St Mary's Anglican Church in East Finchley, London. Their marriage was blessed with three children: James junior, David and Chioma. In 1984, he returned to Nigeria with his family to help establish the University of Nigeria Teaching Hospital Renal Unit. He served as a Senior Registrar in Renal and General Medicine and played a key role in introducing Nigerian culture, customs and traditions to his young children.
+
+Between March 1987 and September 1989, Daddy was a Consultant Physician and Nephrologist at UNTH. He led a committee that developed and commissioned a new renal dialysis unit equipped with the latest "Gambro" technology. His passion for this project was so strong that he sometimes used his own funds to purchase the equipment, especially for peritoneal dialysis. He also recruited a new team of dialysis nurses and technicians and arranged their specialised training. Additionally, he chaired a committee that devised detailed strategies to combat the deadly Lassa Fever outbreak in Enugu in March 1989.  
+
+As a Senior Lecturer in Medicine, he also organised the undergraduate and postgraduate UNTH medical school examinations and represented the Faculty of Medicine on the University Senate exams committee from 1987 to 1989. He was also Director of Postgraduate Education at the Medical School from 1986 to 1989. His significant contributions to medical training and practice at UNTH were recognised by a flood of letters of appreciation, awards and commendations from patients students and fellow doctors.
+
+In 1987, he became a Fellow of the West African College of Physicians (FWACP) and was later appointed a Fellow of the Royal College of Physicians (FRCP, London) in 1992. He was also a member of other prestigious medical societies including the Renal Association, European Dialysis & Transplant Association and the International Society of Nephrology.
+
+His career then took him to the Middle East. He first worked as Director of Renal Services and Consultant Physician and Nephrologist at King Fahad Hospital in Al-Baha, Saudi Arabia from September 1989 to October 1992. Later he became Senior Consultant Nephrologist at King Abdulaziz Hospital in Jeddah from November 1992 to November 1994. His family briefly joined him in Saudi Arabia before moving back to the UK in August 1990.
+
+In October 1995, Daddy rejoined the family in the UK. He was appointed Consultant Physician and Nephrologist at North Middlesex Hospital and the Royal Free Hospital in London. He also served as an Associate Professor of Medicine at St. George's International School of Medicine in Grenada, where students were on medical rotation at North Middlesex Hospital. From 2002 until his retirement in December 2016, he was a Royal College Tutor and Examiner for the part 2 PACES Membership Exam into the Royal College of Physicians. Throughout his career, he published 38 peer-reviewed articles, including 29 as the first author, in prestigious journals like the Lancet and BMJ.
+
+Daddy's achievements, awards and accolades reflect his unwavering commitment and passion for medicine. Over the years, students and colleagues consistently described him as an "outstanding teacher." His exceptional organisational skills allowed him to simplify complex concepts into easily understandable parts, and he created clear sketches to illustrate advanced pathophysiological processes. His patience and exemplary bedside manner made his lectures and ward rounds popular educational events and engaging discussions among his students at all the institutions he worked in.
+
+At home, Daddy's meticulous approach and clarity of thought were evident. When plans weren't clear, he would patiently wait for silence, then laugh in exasperation, saying "confusion absolut!" Every letter received had a designated folder in his study. He preferred his rice and stew in a precise 60%:40% ratio and never spilled a drop of food outside his plate while eating.  
+
+His patients held him in the highest regard, speaking of him in glowing superlatives. Daddy was empathetic, compassionate, selfless and utterly dedicated to those he cared for. He always prioritised their interests above his own, routinely going above and beyond to ensure their best outcomes. He truly was an excellent doctor.
+
+One of Daddy's enduring mantras was that hard work and perseverance were the keys to success. He instilled in us the importance of a good work ethic from a young age, using household phrases during exam season like "Burn the midnight oil", "Rolu ntutu ta" (perseverance), "make sure you've combed through the syllabus", "leave no stone unturned" and "have nothing left when crossing the finish line". He then demonstrated this through his own actions, sacrificing his own comforts and luxuries for years to fund the best schooling for his three children. For these bold acts of pure love and selflessness, we are eternally grateful!  
+
+Dad was above all a loving, loyal and devoted family man. He always made sure his extended family was well supported and never left wanting. We witnessed firsthand over the years his caring and devoted nature towards his late mother, Mama. He oversaw her medical and financial needs and regularly visited her to ensure her well-being. Fulfilling these responsibilities brought him immense joy and satisfaction. Growing up, we all visited Nigeria together, spending time in the village with the extended family and practising our Igbo. We looked at old pictures and memorabilia from his childhood, university days and newlywed life, and listened to family members recount his fondest memories as a son, brother and friend. Hearing our eager questions about his early life and watching Mama captivate us with her wise Igbo proverbs and anecdotes filled Dad with priceless joy and fulfilment.
+
+He also enjoyed the relaxed quality family time we spent together at our family homes in Windsor, Dulwich and Chigwell during our regular holidays abroad and over dinner at our favourite restaurants. Some of our favourite family memories happened in Saudi Arabia when we were young. After a busy week consulting patients, Dad would often drive us in his white 'Jeep' to the "Corniche" -- the seafront overlooking the Red Sea. We sampled the finest Arabic cuisine, listened to music and enjoyed rollercoaster rides and breathtaking views. He also introduced us to his love of classical music when we were pre-teens, as Richard Clayderman CDs played repeatedly around our house in Al-Baha.
+
+Dad absolutely adored sports! As a Manchester United fan, he and the family relished tense and exciting football matches, often bringing out his vocal and animated side. He also had a passion for boxing, often reminiscing and eulogising over legendary champions from the golden era, including Mohammed Ali, George Foreman, Sugar Ray Leonard, Tommy Hearns and Joe Frazier. Tennis was another sport he enjoyed, and at the mention of John McEnroe, he'd start recounting his infamous comedic outbursts of "You cannot be serious!"
+
+Dad also loved watching nature and wildlife documentaries, particularly the David Attenborough series. He followed world politics with keen interest and frequented social events, enjoying meetings with old friends over his favourite chilled "sweating" Heineken. Music was another passion, with favourites including Andre Rieu, Andrea Boccelli, Elton John and George Michael.  
+
+Daddy's father was one of the first Anglican priests to establish churches across Eastern Nigeria and spread the Gospel of Jesus Christ after receiving Christianity from European and American missionaries visiting Africa. This strong Anglican upbringing, rooted in selfless service and missionary work, involved regular Bible study and choir practice. Their nightly family prayer sessions, preceded by recitals of their favourite 'Ancient and Modern' hymns, were a cherished daily routine that fostered family closeness, strengthened faith and profoundly influenced his lifelong passion for Praise and Worship. Some of his favourites included 'Forth In Thy Name O Lord I Go', 'Be Thou My Guardian and my Guide' and 'Guide Me O Thou Great Redeemer'. At pre-school, Daddy taught us some of these hymns and we still enjoy singing them together before family prayers, now in our own homes. Even in his final days, he hummed along the descant to 'Guide Me O Thou Great Redeemer' while the rest of us sang it by his bedside.
+
+The hallmark of Daddy's Christianity -- his character -- particularly shone through during his illness. Despite the challenges, he demonstrated resilience and continued practising his beloved medicine full-time, maintaining his usual standards of excellence. One of the junior doctors he taught during his final shift remarked that she "didn't even know he was ill in any way". This is the greatest evidence of his true love for his job; he did it effortlessly and genuinely cherished the opportunity to positively impact people's lives as their doctor. He was the consummate physician!
+
+He continued serving his profession until his retirement in October 2016. After retirement, Daddy continued to attend to the emotional and physical needs of many around him, keeping his own struggles quiet and confidential. He was selfless to the very end.
+
+Facing this challenge, Daddy remained determined to live life to the fullest. He enthusiastically commented on televised musical performances, exciting news headlines, football and boxing matches. Whenever a Manchester United striker hesitated before a clear goal, he would fling his right index finger at the TV screen and shout "FIRE!". Despite his diagnosis, he never showed anger, frustration, despair or self-pity; he remained dignified throughout his illness. Memorable phrases include "do what you can and leave the rest to God", "one has to accept the hand nature has dealt them" and "if anything happens it must be the will of God".
+
+As the disease progressed, he was admitted to hospital where his comfort was optimised. On his 70th birthday, he celebrated with close family and received numerous heartfelt congratulatory calls from his loved ones.
+
+Ten days later, on 4th May 2017, he peacefully slipped away with his wife and children by his side, fulfilling his wishes.
+
+Daddy's courage and bravery in battling this illness were astounding. He fought with immense strength of character and profound dignity, stemming from a deep faith and hope in God's eternal promises.  
+
+James Kenechukwu Onwubalili lived the epitome of a successful life. Despite humble beginnings, he balanced hard work, determination and faith to maximise every educational opportunity. He secured his dream jobs with distinction and used the same tools to achieve postgraduate academic excellence and international acclaim, remaining remarkably humble throughout. At every stage, he actively encouraged and assisted his friends and colleagues with job applications and specialist training, helping to nurture some of today's flourishing Nigerian communities in the global diaspora. His academic brilliance continues to resonate in Ibadan and Umuahia, paving the way for generations of Nigerian medical graduates who now work in the NHS.
+
+Above all, Daddy was an exceptional father, devoted loving husband, caring brother, supportive uncle and loyal friend. Even in his final days, he remained dignified, considerate and selfless, fiercely protecting his family's emotions and planning for our future.
+
+As he rests in perfect peace, we all yearn for more time with him. However, I believe Daddy was content with his earthly accomplishments. His kindness, compassion and 70 years of selfless service touched countless lives worldwide, demonstrating the highest standards of humanity and undoubtedly saving many souls. Daddy, thank you for sacrificing your own comforts and putting your needs aside to carry us all on your shoulders so we could achieve our goals. Your actions have truly defined 'love' for us. It's been a privilege and honour to experience your genuine benevolence firsthand and witness your incredible life of service to humanity. We are eternally grateful to have called you 'Daddy' and 'our Father'.
+
+Your legacy will live on in every branch of our family tree for generations to come. You've left indelible footprints in our hearts and we promise to continue your good work and keep your flag flying high.
+
+Dr James Chidi Onwubalili (Son)
+
+For the family  
