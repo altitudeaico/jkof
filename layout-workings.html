@@ -48,19 +48,37 @@
     </style>
 </head>
 <body style="background:#f7f7f5;">
-<div style="max-width:1100px;margin:2rem auto;padding:0 1.5rem;font-family:var(--sans,sans-serif);">
+<div style="max-width:1160px;margin:2rem auto;padding:0 1.5rem;">
   <h1 style="font-family:var(--serif,serif);color:var(--navy,#12314f);font-size:1.8rem;">Hamlet pair &mdash; layout workings</h1>
-  <p style="color:#666;max-width:60ch;">Test page only &mdash; not linked from the site. The live biography page is untouched.
-  Each column below is rendered at a typical gallery card width so the two treatments can be compared like-for-like.</p>
+  <p style="color:#666;max-width:64ch;">Test page only. Part 1 was the side-by-side vs stacked comparison. Part 2 below addresses the caption width: three treatments for the descriptive writing.</p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:2rem;">
+  <h2 style="font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold,#b8860b);margin-top:2.5rem;">Part 1 &mdash; approved: the straight stack</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+    <div><p style="font-size:.75rem;color:#999;">Before (side by side)</p><div class="bio-gallery" style="display:block;max-width:340px;"><figure style="grid-column: span 1;"><div style="display: flex; gap: 0.4rem;"><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div></div><figcaption style="padding: 0.7rem 1rem;">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959</figcaption></figure></div></div>
+    <div><p style="font-size:.75rem;color:#999;">After (stacked)</p><div class="bio-gallery" style="display:block;max-width:340px;"><figure style="grid-column: span 1;"><div style="display: flex; flex-direction: column; gap: 0.4rem;"><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div></div><figcaption style="padding: 0.7rem 1rem;">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959</figcaption></figure></div></div>
+  </div>
+
+  <h2 style="font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold,#b8860b);margin-top:3.5rem;">Part 2 &mdash; the descriptive writing</h2>
+
+  <div style="display:grid;grid-template-columns:340px 1fr;gap:3rem;align-items:start;margin-top:1.5rem;">
+    <div><p style="font-size:.85rem;color:#444;font-weight:600;">Option 1 &mdash; same width, better typography</p>
+    <p style="font-size:.8rem;color:#888;max-width:32ch;">Card stays one column. Larger, more spaced serif for the caption. Least change; lines stay short.</p><figure style="margin:0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);">
+<div style="display:flex;flex-direction:column;gap:0.4rem;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" style="width:100%;display:block;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" style="width:100%;display:block;"></div>
+<figcaption style="padding:1.1rem 1.3rem 1.3rem;font-family:var(--serif);font-style:italic;color:#666;font-size:1.02rem;line-height:1.75;text-align:center;">JK as the Prince of Denmark (Hamlet) &ndash; Government College Umuahia, 1959</figcaption></figure></div>
     <div>
-      <h2 style="font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold,#b8860b);">Current &mdash; side by side</h2>
-      <div class="bio-gallery" style="display:block;max-width:340px;"><figure style="grid-column: span 1;"><div style="display: flex; gap: 0.4rem;"><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div></div><figcaption style="padding: 0.7rem 1rem;">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959</figcaption></figure></div>
-    </div>
-    <div>
-      <h2 style="font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold,#b8860b);">Option A &mdash; straight stack (David's suggestion)</h2>
-      <div class="bio-gallery" style="display:block;max-width:340px;"><figure style="grid-column: span 1;"><div style="display: flex; flex-direction: column; gap: 0.4rem;"><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div><div style="flex: 1; overflow: hidden; border-radius: 6px;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" alt="JK as the Prince of Denmark (Hamlet)" style="width: 100%; height: auto; display: block;"></div></div><figcaption style="padding: 0.7rem 1rem;">JK as the Prince of Denmark (Hamlet) – Government College Umuahia, 1959</figcaption></figure></div>
+      <p style="font-size:.85rem;color:#444;font-weight:600;">Option 2 &mdash; feature width (recommended)</p>
+      <p style="font-size:.8rem;color:#888;max-width:60ch;">The pair spans two columns of the gallery. Photographs larger, and the writing gets a full-width line. The only two-photo entry becomes a feature moment.</p>
+      <div style="max-width:700px;"><figure style="margin:0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);">
+<div style="display:flex;flex-direction:column;gap:0.5rem;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" style="width:100%;display:block;"><img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" style="width:100%;display:block;"></div>
+<figcaption style="padding:1.2rem 2rem 1.4rem;font-family:var(--serif);font-style:italic;color:#666;font-size:1.05rem;line-height:1.7;text-align:center;">JK as the Prince of Denmark (Hamlet) &ndash; Government College Umuahia, 1959</figcaption></figure></div>
+      <p style="font-size:.85rem;color:#444;font-weight:600;margin-top:3rem;">Option 3 &mdash; magazine arrangement</p>
+      <p style="font-size:.8rem;color:#888;max-width:60ch;">Also two columns wide, but compact: the solo portrait on the left, the stage scene top right, and the writing fills the space beneath it.</p>
+      <div style="max-width:700px;"><figure style="margin:0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+<img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(2).jpeg" style="width:100%;height:100%;object-fit:cover;display:block;">
+<div style="display:flex;flex-direction:column;">
+<img src="bio/images/WhatsApp_Image_2026-06-07_at_16.29.26_(1).jpeg" style="width:100%;display:block;">
+<figcaption style="flex:1;display:flex;align-items:center;padding:1rem 1.4rem;font-family:var(--serif);font-style:italic;color:#666;font-size:1.02rem;line-height:1.75;">JK as the Prince of Denmark (Hamlet) &ndash; Government College Umuahia, 1959</figcaption>
+</div></figure></div>
     </div>
   </div>
 </div>
