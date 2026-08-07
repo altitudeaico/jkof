@@ -13,6 +13,7 @@ Exit code 1 if any ERROR is found, so it can gate a push.
 Usage: python3 tools/qa_check.py
 """
 
+import html as html_mod
 import re
 import sys
 from collections import defaultdict
@@ -20,7 +21,8 @@ from pathlib import Path
 
 ROOT = Path(".")
 PLACEHOLDERS = ["TBC", "TODO", "XXXX", "Lorem ipsum", "INSERT ", "[placeholder]"]
-SKIP = {"image-review.html", "contact-sheet.html", "gallery-reconciliation-review.html"}
+SKIP = {"image-review.html", "contact-sheet.html", "gallery-reconciliation-review.html",
+        "layout-workings.html", "biography-verbatim-workings.html"}
 
 errors, warnings = [], []
 
@@ -43,7 +45,7 @@ def check_images(page, html):
     for fig in figures:
         imgs = re.findall(r'<img[^>]+src="([^"]+)"', fig)
         caps = re.findall(r"<figcaption[^>]*>(.*?)</figcaption>", fig, flags=re.S)
-        caption = " ".join(re.sub(r"<[^>]+>", "", caps[0]).split()) if caps else None
+        caption = " ".join(html_mod.unescape(re.sub(r"<[^>]+>", "", caps[0])).split()) if caps else None
 
         if imgs and not caption:
             errors.append(f"{page.name}: figure has no caption -> {imgs[0]}")
@@ -80,7 +82,7 @@ def check_duplicate_photos(page, html):
     by_hash = defaultdict(list)
     for fig in figures:
         caps = re.findall(r"<figcaption[^>]*>(.*?)</figcaption>", fig, flags=re.S)
-        caption = " ".join(re.sub(r"<[^>]+>", "", caps[0]).split()) if caps else "(none)"
+        caption = " ".join(html_mod.unescape(re.sub(r"<[^>]+>", "", caps[0])).split()) if caps else "(none)"
         for src in re.findall(r'<img[^>]+src="(?!https?://|data:)([^"]+)"', fig):
             target = page.parent / src
             if target.exists():
