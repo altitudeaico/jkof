@@ -22,7 +22,8 @@ from pathlib import Path
 ROOT = Path(".")
 PLACEHOLDERS = ["TBC", "TODO", "XXXX", "Lorem ipsum", "INSERT ", "[placeholder]"]
 SKIP = {"image-review.html", "contact-sheet.html", "gallery-reconciliation-review.html",
-        "layout-workings.html", "biography-verbatim-workings.html"}
+        "layout-workings.html", "biography-verbatim-workings.html",
+        "biography-gallery-preview.html"}
 
 errors, warnings = [], []
 
