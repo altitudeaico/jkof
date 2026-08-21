@@ -52,6 +52,14 @@ four photographs that are not among the 26. Not a build decision.
 | 7 | Upload: `JKOF_website_annotations.docx` | Aunty Vivian | 29 Jun 2026 | CHECKED 4 Aug 2026 — 26 embedded images, all already on site |
 | 8 | Drive: `Dr Onwubualili PDF`, `DR JAMES ONWUBALILI PROGRAMME Part B.pdf` | family | 30 Jan 2026 | **UNCHECKED** — memorial programme, likely source of several portraits |
 
+## Additions after the register was created
+
+- 21 Aug 2026: Niger House photograph (Captain, 1964/65) supplied by the family
+  via a link-shared Drive file (Screenshot_20260821_154854_WhatsApp.jpg,
+  1012x599 - the file as supplied; no higher-resolution original in Drive).
+  Caption supplied verbatim by the family. Installed as
+  bio/images/jk-niger-house-captain-1964-65.jpg.
+
 ## Known outstanding, by evidence
 
 - Photograph 1, "young JK in a white long sleeve shirt" — **not found** in
